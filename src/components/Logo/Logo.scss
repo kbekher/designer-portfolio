@@ -1,0 +1,13 @@
+@import '../../utils/utils';
+
+.Logo {
+  border: none;
+  background-color: transparent;
+
+  &__image {
+    display: block;
+    width: 54px;
+    height: 54px;
+  }
+
+}

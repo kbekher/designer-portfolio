@@ -1,3 +1,23 @@
+@import '../../utils/utils';
+
 .Header {
-  
+  &__content {
+    padding: 20px 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__menu-btn {
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__socials {
+    // display: none;
+  }
 }

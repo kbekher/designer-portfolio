@@ -1,9 +1,5 @@
 @import './utils/utils';
 
-h1 {
-font-family: Typefesse;
-color: #047582;
-text-align: center;
-font-size: 110px;
-font-weight: 400;
+.App {
+  background-color: $color-background;
 }

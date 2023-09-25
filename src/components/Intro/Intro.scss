@@ -1,0 +1,11 @@
+@import '../../utils/utils';
+
+.Intro {
+  &__title {
+    font-family: Typefesse;
+    color: $color-branding;
+    text-align: center;
+    font-size: 110px;
+    font-weight: 400;
+  }
+}

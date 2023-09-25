@@ -1,25 +1,27 @@
 @font-face {
   font-family: 'Typefesse';
+  font-style: normal;
+  font-weight: 400;
   src: local('Typefesse'),
-    url('./fonts/Typefesse_Claire-Obscure.otf') format('otf'),
-    url('./fonts/Typefesse_Pleine.otf') format('otf'),
+    url('./fonts/Typefesse_Claire-Obscure.woff2') format('woff2'),
+    url('./fonts/Typefesse_Pleine.woff2') format('woff2'),
 }
 
-@font-face {
-  font-family: 'Oswald';
-  src: local('Oswald'),
-    url('./fonts/Oswald-VariableFont_wght.ttf') format('ttf'),
-}
+// @font-face {
+//   font-family: 'Oswald';
+//   src: local('Oswald'),
+//     url('./fonts/Oswald-VariableFont_wght.ttf') format('ttf'),
+// }
 
-@font-face {
-  font-family: 'SF-Pro';
-  src: local('SF-Pro'),
-    url('./fonts/SF-Pro.ttf') format('ttf'),
-}
+// @font-face {
+//   font-family: 'SF-Pro';
+//   src: local('SF-Pro'),
+//     url('./fonts/SF-Pro.ttf') format('ttf'),
+// }
 
-@font-face {
-  font-family: 'SF-Compact-Text';
-  src: local('SF-Compact-Text'),
-    url('./fonts/SF-Compact-Text-Regular.otf') format('otf'),
-    url('./fonts/SF-Compact-Text-Bold.otf') format('otf'),
-}
+// @font-face {
+//   font-family: 'SF-Compact-Text';
+//   src: local('SF-Compact-Text'),
+//     url('./fonts/SF-Compact-Text-Regular.otf') format('otf'),
+//     url('./fonts/SF-Compact-Text-Bold.otf') format('otf'),
+// }

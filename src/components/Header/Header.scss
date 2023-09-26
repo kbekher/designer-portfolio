@@ -1,4 +1,4 @@
-@import '../../utils/utils';
+@import '../../styles/utils';
 
 .Header {
   position: fixed;
@@ -12,23 +12,17 @@
   // animation: slideInFromTop 1s ease-out 0s 1 normal forwards;
   // transition: $transition;
 
-  &__content {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  // &__content {
+  //   // padding: 20px;
+  //   display: flex;
+  //  flex-direction: column;
+
+  // }
 
   &__menu {
     width: 100%;
-    height: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
-    display: none;
-    
-    &--visible {
-      display: block;
-    }
   }
 
   &__hamburger {
@@ -55,7 +49,11 @@
   }
 
   &__socials {
-    display: none;
+    position: absolute;
+    right: 0px;
+    top: auto;
+    bottom: 60px;
+    width: 100%;
   }
 }
 

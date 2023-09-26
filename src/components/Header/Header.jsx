@@ -13,13 +13,21 @@ export const Header = ({ isMenuOpen, setIsMenuOpen }) => {
       <div className="Header__content">
         <Logo />
 
-        <div className={cn("Header__menu", {
-          "Header__menu--visible": isMenuOpen,
-        })}>
-          <Nav />
+        <div
+          className="Header__menu"
+          style={{
+            'display': isMenuOpen ? 'block' : 'none'
+          }}
+        >
+          <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
         </div>
 
-        <div className="Header__socials">
+        <div
+          className="Header__socials"
+          style={{
+            'display': isMenuOpen ? 'block' : 'none'
+          }}
+        >
           <Socials />
         </div>
 

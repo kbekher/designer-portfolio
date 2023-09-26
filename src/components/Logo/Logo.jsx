@@ -9,8 +9,8 @@ export const Logo = () => {
   };
 
   return (
-    <button 
-      type="button"
+    <a 
+      href="/"
       className="Logo" 
       onClick={scrollToTop}
     >
@@ -19,6 +19,6 @@ export const Logo = () => {
         src="./images/logo.webp"
         alt="logo"
       />
-    </button>
+    </a>
   );
 };

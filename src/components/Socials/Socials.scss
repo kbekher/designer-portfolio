@@ -1,7 +1,9 @@
-@import '../../utils/utils';
+@import '../../styles/utils';
 
 .Socials {
   display: flex;
+  justify-content: center;
+  align-items: center
 }
 
 .SocialLink {

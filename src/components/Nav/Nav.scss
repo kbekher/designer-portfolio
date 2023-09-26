@@ -1,4 +1,42 @@
+@import '../../styles/utils';
+
 .Nav {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  color: $color-branding;
+  background-color: $color-background;
+
+  opacity: 0.9;
+  min-height: 100vh;
+
+  * > & :not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    margin: 0 auto;
+    width: max-content;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 38px;
+
+    &::after {
+      content: "";
+      background-color: $color-branding;
+      display: none;
+      height: 2px;
+      width: 100%;
+    }
+
+    &:hover,
+    &:active {
+      &::after {
+        display: block;
+      }
+    }
+  }
 }

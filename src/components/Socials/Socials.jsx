@@ -1,4 +1,4 @@
-import { socialLinks } from './links';
+import { socialLinks } from '../../utils/links';
 
 import './Socials.scss';
 

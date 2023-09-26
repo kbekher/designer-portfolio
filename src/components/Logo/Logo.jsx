@@ -9,7 +9,11 @@ export const Logo = () => {
   };
 
   return (
-    <button className="Logo" onClick={scrollToTop}>
+    <button 
+      type="button"
+      className="Logo" 
+      onClick={scrollToTop}
+    >
       <img
         className="Logo__image"
         src="./images/logo.webp"

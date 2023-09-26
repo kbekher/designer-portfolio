@@ -1,14 +1,11 @@
+@import '../../utils/utils';
+
 .Socials {
   display: flex;
-
 }
 
 .SocialLink {
+  @extend %background-img;
+  @include square(40px);
   display: block;
-  width: 40px;
-  height: 40px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 }

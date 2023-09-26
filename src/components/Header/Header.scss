@@ -1,23 +1,72 @@
 @import '../../utils/utils';
 
 .Header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  // z-index: 6;
+  // transform: translate(-100%);
+  // animation: slideInFromTop 1s ease-out 0s 1 normal forwards;
+  // transition: $transition;
+
   &__content {
-    padding: 20px 10px 0;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
-  &__nav {
+  &__menu {
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
     display: none;
+    
+    &--visible {
+      display: block;
+    }
   }
 
-  &__menu-btn {
+  &__hamburger {
+    @extend %background-img;
+    @include square(40px);
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    transition: $transition;
+
+    &--menu {
+      background-image: url('../../../public/images/icons/menu.svg');
+    }
+
+    &--cross {
+      background-image: url('../../../public/images/icons/cross.svg');
+    }
+
     @include onDesktop {
       display: none;
     }
   }
 
   &__socials {
-    // display: none;
+    display: none;
   }
 }
+
+// @keyframes slideFromTop {
+//   0% {
+//     transform: translateY(-100%);
+//     opacity: 0;
+//   }
+
+//   100% {
+//     transform: translateY(0px);
+//     opacity: 1;
+//   }
+// }

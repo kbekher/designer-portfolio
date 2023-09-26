@@ -4,17 +4,25 @@ import { Intro } from './components/Intro';
 import { Work } from './components/Work';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { useState } from 'react';
 
-export const App = () => (
-  <div className="App">
-    <Header />
+export const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    <main>
-      <Intro />
-      <Work />
-      <Contact />
-    </main>
+  return (
+    <div className="App">
+      <Header 
+        isMenuOpen={isMenuOpen} 
+        setIsMenuOpen={setIsMenuOpen} 
+      />
 
-    <Footer />
-  </div>
-)
+      <main>
+        <Intro />
+        <Work />
+        <Contact />
+      </main>
+
+      <Footer />
+    </div>
+  );
+};

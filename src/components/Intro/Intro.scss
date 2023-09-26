@@ -1,11 +1,14 @@
 @import '../../utils/utils';
 
 .Intro {
+  height: 100vh;
+
   &__title {
     font-family: Typefesse;
     color: $color-branding;
-    text-align: center;
     font-size: 48px;
     font-weight: 400;
+    text-align: center;
+    padding-top: 50%;
   }
 }

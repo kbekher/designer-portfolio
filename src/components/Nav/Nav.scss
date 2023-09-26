@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: $color-branding;
-  background-color: $color-background;
-
   opacity: 0.9;
   min-height: 100vh;
+
+  color: $color-branding;
+  background-color: $color-background;
 
   * > & :not(:last-child) {
     margin-bottom: 60px;

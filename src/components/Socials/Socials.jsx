@@ -8,10 +8,12 @@ const SocialLink = ({ name, url }) => {
   return (
     <a 
       href={url}
+      target="_blank"
+      rel="noreferrer" 
       className="SocialLink" 
       style={{backgroundImage: `url(${backgroundImage})`}}
     >
-      {' '}
+      {" "}
     </a>
   );
 };

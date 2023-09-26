@@ -1,5 +1,5 @@
 export const socialLinks = [
-  { "id": 0, "name": "behance", "url": "" },
-  { "id": 1, "name": "dribbble", "url": "" },
-  { "id": 2, "name": "instagram", "url": "" }
+  { "id": 0, "name": "behance", "url": "https://www.behance.net/ivaninozemcev" },
+  { "id": 1, "name": "dribbble", "url": "https://dribbble.com/Bluntcath23" },
+  { "id": 2, "name": "instagram", "url": "https://www.instagram.com/inozemtsevco/" }
 ];

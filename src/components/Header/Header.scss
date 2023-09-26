@@ -7,17 +7,6 @@
   width: 100%;
   height: auto;
   min-height: 100px;
-  // z-index: 6;
-  // transform: translate(-100%);
-  // animation: slideInFromTop 1s ease-out 0s 1 normal forwards;
-  // transition: $transition;
-
-  // &__content {
-  //   // padding: 20px;
-  //   display: flex;
-  //  flex-direction: column;
-
-  // }
 
   &__menu {
     width: 100%;
@@ -56,15 +45,3 @@
     width: 100%;
   }
 }
-
-// @keyframes slideFromTop {
-//   0% {
-//     transform: translateY(-100%);
-//     opacity: 0;
-//   }
-
-//   100% {
-//     transform: translateY(0px);
-//     opacity: 1;
-//   }
-// }

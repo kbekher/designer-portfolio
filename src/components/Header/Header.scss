@@ -15,7 +15,7 @@
     @include square(54px);
     @extend %background-img;
     background-size: 40px 40px;
-    
+
     position: absolute;
     right: 20px;
     top: 20px;
@@ -30,7 +30,7 @@
       background-image: url('../../../public/images/icons/cross.svg');
     }
 
-    @include onDesktop {
+    @include onTablet{
       display: none;
     }
   }

@@ -2,8 +2,17 @@ import { Link } from 'react-scroll';
 
 import './Nav.scss';
 
-export const Nav = ({ isMenuOpen, setIsMenuOpen }) => {
-  const handleClick = () => setIsMenuOpen(false);
+export const Nav = ({
+  isMenuOpen = false,
+  setIsMenuOpen = () => { },
+}) => {
+  const handleClick = () => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    setIsMenuOpen(false)
+  };
 
   return (
     <ul className="Nav">

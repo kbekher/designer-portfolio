@@ -1,5 +1,6 @@
 import './App.scss';
 import { Header } from './components/Header';
+import { Menu } from './components/Menu';
 import { Intro } from './components/Intro';
 import { Work } from './components/Work';
 import { About } from './components/About';
@@ -20,6 +21,13 @@ export const App = () => {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
       />
+
+      {isMenuOpen && (
+        <Menu
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
+      )}
 
       <main>
         <Intro />

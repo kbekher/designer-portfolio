@@ -1,0 +1,21 @@
+@import '../../styles/utils';
+
+.Menu {
+  position: fixed;
+  margin-top: $header-height;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(253, 215, 207, 0.9);
+
+  &__content {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 60px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

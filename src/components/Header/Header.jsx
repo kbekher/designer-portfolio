@@ -10,24 +10,14 @@ export const Header = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <header className="Header">
-      <div className="Header__content">
         <Logo />
 
-        <div
-          className="Header__menu"
-          style={{
-            'display': isMenuOpen ? 'block' : 'none'
-          }}
-        >
-          <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+        <div className="Header__nav">
+          <Nav />
         </div>
 
-        <div
-          className="Header__socials"
-          style={{
-            'display': isMenuOpen ? 'block' : 'none'
-          }}
-        >
+
+        <div className="Header__socials" >
           <Socials />
         </div>
 
@@ -41,7 +31,6 @@ export const Header = ({ isMenuOpen, setIsMenuOpen }) => {
         >
           {" "}
         </button>
-      </div>
     </header>
   );
 };

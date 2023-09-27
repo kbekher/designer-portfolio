@@ -4,13 +4,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  opacity: 0.9;
-  min-height: 100vh;
 
   color: $color-branding;
-  background-color: $color-background;
 
-  * > & :not(:last-child) {
+  *>& :not(:last-child) {
     margin-bottom: 60px;
   }
 
@@ -21,22 +18,26 @@
 
   &__link {
     font-weight: 600;
-    font-size: 38px;
-    line-height: 38px;
+    font-size: 52px;
+    line-height: 52px;
+    position: relative;
+    cursor: pointer;
 
     &::after {
       content: "";
+      position: absolute;
+      bottom: 0;
       background-color: $color-branding;
-      display: none;
+      width: 0;
       height: 2px;
-      width: 100%;
+      left: 50%;
+      transition: $transition;
+      transform: translateX(-50%);
     }
 
-    &:hover,
-    &:active {
-      &::after {
-        display: block;
-      }
+    &:hover::after,
+    &:active::after {
+      width: 100%;
     }
   }
 }

@@ -3,11 +3,14 @@
 .Socials {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+
+  * > & :not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .SocialLink {
   @extend %background-img;
-  @include square(40px);
-  display: block;
+  @include square(54px);
 }

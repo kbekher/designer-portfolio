@@ -7,7 +7,7 @@
 
   color: $color-branding;
 
-  *>& :not(:last-child) {
+  * > & :not(:last-child) {
     margin-bottom: 60px;
   }
 

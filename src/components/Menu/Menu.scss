@@ -12,6 +12,10 @@
   opacity: 1;
   transition: $transition;
 
+  @include onTablet {
+    display: none;
+  }
+
   &__content {
     box-sizing: border-box;
     height: 100%;
@@ -20,10 +24,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-  }
-
-  @include onTablet {
-    display: none;
   }
 }
 

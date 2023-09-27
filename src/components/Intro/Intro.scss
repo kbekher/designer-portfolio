@@ -10,16 +10,14 @@
   &__content {
     height: 100%;
     padding: 0 30px;
-    box-sizing: border-box;
   }
 
   &__holder {
     width: 100%;
-    height: auto;
+    // height: auto;
     max-width: 960px;
     margin: auto;
     padding-top: 150px;
-    box-sizing: border-box;
   }
 
   &__title-img{

@@ -4,10 +4,6 @@
   @include square(40px);
   cursor: pointer;
   transition: $transition;
-
-  @include onTablet {
-    display: none;
-  }
 }
 
 .icon-1,

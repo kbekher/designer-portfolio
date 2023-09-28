@@ -1,13 +1,11 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import cn from 'classnames';
-import { MenuContext } from '../../MenuContext';
 import { Nav } from '../Nav';
 import { Socials } from '../Socials';
 
 import './Menu.scss';
 
-export const Menu = ( ) => {
-  const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
+export const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -15,9 +13,9 @@ export const Menu = ( ) => {
   }, []);
 
   return (
-    <div className={cn("Menu", {"hidden": !isVisible})}>
+    <div className={cn("Menu", { "hidden": !isVisible })}>
       <div className="Menu__content">
-        <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Nav />
         <Socials />
       </div>
     </div>

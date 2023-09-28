@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import { Link } from 'react-scroll';
+import { MenuContext } from '../../MenuContext';
 
 import './Nav.scss';
 
-export const Nav = ({
-  isMenuOpen = false,
-  setIsMenuOpen = () => { },
-}) => {
+export const Nav = () => {
+  const {isMenuOpen, setIsMenuOpen} = useContext(MenuContext);
+
   const handleClick = () => {
     if (!isMenuOpen) {
       return;

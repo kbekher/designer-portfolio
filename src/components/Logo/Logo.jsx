@@ -1,24 +1,31 @@
+import { useContext } from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import './Logo.scss';
+import { MenuContext } from '../../MenuContext';
 
 export const Logo = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  const {isMenuOpen, setIsMenuOpen} = useContext(MenuContext);
+
+  const handleClick = () => {
+    if (!isMenuOpen) {
+      return;
+    }
+
+    setIsMenuOpen(false)
+    scroll.scrollToTop();
+  }
 
   return (
-    <a 
-      href="/"
+    <button
+      type="button"
       className="Logo" 
-      onClick={scrollToTop}
+      onClick={handleClick}
     >
       <img
         className="Logo__image"
         src="./images/logo.webp"
         alt="logo"
       />
-    </a>
+    </button>
   );
 };

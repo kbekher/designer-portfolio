@@ -2,9 +2,7 @@
 
 .Logo {
   @include square(54px);
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  display: block;
 
   &__image {
     @include square(54px);

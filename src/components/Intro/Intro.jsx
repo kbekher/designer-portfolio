@@ -38,63 +38,61 @@ const transitionBgStyles = {
 };
 //#endregion
 
-export const Intro = () => {
-  return (
-    <TransitionGroup>
-      <div className="Intro">
-        <h1 className="visually-hidden">Ivan Inozemtsev</h1>
+export const Intro = () => (
+  <TransitionGroup>
+    <div className="Intro">
+      <h1 className="visually-hidden">Ivan Inozemtsev</h1>
 
-        <div className="Intro__content">
-          <div className="Intro__holder">
-            <CSSTransition in appear timeout={duration1}>
-              {(state) => (
-                <img
-                  className="Intro__title-img"
-                  style={{
-                    ...defaultTitleStyle,
-                    ...transitionTitleStyles[state],
-                  }}
-                  src="./images/intro/title.webp"
-                  alt="Ivan Inozemtsev"
-                />
-              )}
-            </CSSTransition>
-
-            <CSSTransition in appear timeout={duration2}>
-              {(state) => (
-                <p
-                  className="Intro__subtitle"
-                  style={{
-                    ...defaultSubtitleStyle,
-                    ...transitionSubtitleStyles[state],
-                  }}
-                >
-                  Ukrainian designer & illustrator based in Germany.
-                  Please visit my Instagram to keep up with my latest work.
-                </p>
-              )}
-            </CSSTransition>
-          </div>
-        </div>
-
-        <CSSTransition in appear timeout={duration2}>
-          {(state) => (
-            <div
-              className="Intro__bg-container"
-              style={{
-                ...defaultBgStyle,
-                ...transitionBgStyles[state],
-              }}
-            >
+      <div className="Intro__content">
+        <div className="Intro__holder">
+          <CSSTransition in appear timeout={duration1}>
+            {(state) => (
               <img
-                className="Intro__bg-image"
-                src="./images/intro/me.webp"
+                className="Intro__title-img"
+                style={{
+                  ...defaultTitleStyle,
+                  ...transitionTitleStyles[state],
+                }}
+                src="./images/intro/title.webp"
                 alt="Ivan Inozemtsev"
               />
-            </div>
-          )}
-        </CSSTransition>
+            )}
+          </CSSTransition>
+
+          <CSSTransition in appear timeout={duration2}>
+            {(state) => (
+              <p
+                className="Intro__subtitle"
+                style={{
+                  ...defaultSubtitleStyle,
+                  ...transitionSubtitleStyles[state],
+                }}
+              >
+                Ukrainian designer & illustrator based in Germany.
+                Please visit my Instagram to keep up with my latest work.
+              </p>
+            )}
+          </CSSTransition>
+        </div>
       </div>
-    </TransitionGroup>
-  );
-};
+
+      <CSSTransition in appear timeout={duration2}>
+        {(state) => (
+          <div
+            className="Intro__bg-container"
+            style={{
+              ...defaultBgStyle,
+              ...transitionBgStyles[state],
+            }}
+          >
+            <img
+              className="Intro__bg-image"
+              src="./images/intro/me.webp"
+              alt="Ivan Inozemtsev"
+            />
+          </div>
+        )}
+      </CSSTransition>
+    </div>
+  </TransitionGroup>
+);

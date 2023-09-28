@@ -1,14 +1,16 @@
 @import '../../styles/utils';
 
 .Nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  color: $color-branding;
+    color: $color-branding;
 
-  * > & :not(:last-child) {
-    margin-bottom: 60px;
+    * > & :not(:last-child) {
+      margin-bottom: 60px;
+    }
   }
 
   &__item {

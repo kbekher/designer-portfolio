@@ -1,4 +1,3 @@
-import './App.scss';
 import { Header } from './components/Header';
 import { Menu } from './components/Menu';
 import { Intro } from './components/Intro';
@@ -8,14 +7,13 @@ import { Footer } from './components/Footer';
 import { useContext } from 'react';
 import { MenuContext } from './MenuContext';
 
+import './App.scss';
+
 export const App = () => {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { isMenuOpen } = useContext(MenuContext);
 
   return (
-    <div
-      className="App"
-      style={{
+    <div className="App" style={{
         'overflow': isMenuOpen ? 'hidden' : ''
       }}
     >

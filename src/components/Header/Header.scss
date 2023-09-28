@@ -1,12 +1,18 @@
 @import '../../styles/utils';
 
 .Header {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   width: 100%;
   height: $header-height;
   z-index: 1000;
+
+  &__logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
 
   &__nav {
     display: none;

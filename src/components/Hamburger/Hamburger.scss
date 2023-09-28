@@ -1,0 +1,51 @@
+@import '../../styles/utils';
+
+.Hamburger {
+  @include square(40px);
+  cursor: pointer;
+  transition: $transition;
+
+  @include onTablet {
+    display: none;
+  }
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+  position: absolute;
+  left: 50%;
+  transform: $menu-line-transform;
+  top: 50%;
+  width: 40px;
+  height: 6px;
+  background-color: $color-branding;
+  border-radius: 6px;
+  transition: all 400ms cubic-bezier(.84, .06, .52, 1.8);
+}
+
+.icon-1 {
+  transform: $menu-line-transform translateY(-12px);
+  animation-delay: $transition-duration;
+}
+
+.icon-3 {
+  transform: $menu-line-transform translateY(12px);
+  animation-delay: $transition-duration;
+}
+
+.icon-1.a {
+  transform: $menu-line-transform rotate(40deg);
+}
+
+.icon-3.b {
+  transform: $menu-line-transform rotate(-40deg);
+}
+
+.icon-2.c {
+  opacity: 0;
+}
+
+.clear {
+  clear: both;
+}

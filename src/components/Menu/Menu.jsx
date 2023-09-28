@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
-import { Nav } from "../Nav";
-import { Socials } from "../Socials";
+import { useContext, useEffect, useState } from 'react';
+import cn from 'classnames';
+import { MenuContext } from '../../MenuContext';
+import { Nav } from '../Nav';
+import { Socials } from '../Socials';
 
 import './Menu.scss';
 
-export const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
+export const Menu = ( ) => {
+  const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -12,7 +15,7 @@ export const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
   }, []);
 
   return (
-    <div className={`Menu ${isVisible ? '' : 'hidden'}`}>
+    <div className={cn("Menu", {"hidden": !isVisible})}>
       <div className="Menu__content">
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <Socials />

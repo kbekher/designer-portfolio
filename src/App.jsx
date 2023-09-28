@@ -5,10 +5,12 @@ import { Intro } from './components/Intro';
 import { Work } from './components/Work';
 import { About } from './components/About';
 import { Footer } from './components/Footer';
-import { useState } from 'react';
+import { useContext } from 'react';
+import { MenuContext } from './MenuContext';
 
 export const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isMenuOpen } = useContext(MenuContext);
 
   return (
     <div
@@ -17,16 +19,10 @@ export const App = () => {
         'overflow': isMenuOpen ? 'hidden' : ''
       }}
     >
-      <Header
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
+      <Header />
 
       {isMenuOpen && (
-        <Menu
-          isMenuOpen={isMenuOpen}
-          setIsMenuOpen={setIsMenuOpen}
-        />
+        <Menu />
       )}
 
       <main>

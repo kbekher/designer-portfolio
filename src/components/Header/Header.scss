@@ -1,7 +1,7 @@
 @import '../../styles/utils';
 
 .Header {
-  position: fixed;
+  position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
@@ -13,13 +13,16 @@
 
   &__hamburger {
     @include square(54px);
-    @extend %background-img;
     background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    // @extend %background-img;
 
     position: absolute;
     right: 20px;
     top: 20px;
-
+    z-index: 1;
+    
     transition: $transition;
 
     &--menu {

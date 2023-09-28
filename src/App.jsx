@@ -14,7 +14,7 @@ export const App = () => {
     <div
       className="App"
       style={{
-        'overflow': isMenuOpen && 'hidden'
+        'overflow': isMenuOpen ? 'hidden' : ''
       }}
     >
       <Header

@@ -1,40 +1,52 @@
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 import './Intro.scss';
 
+//#region animations
+const duration1 = 400; // Animation duration in milliseconds
+const duration2 = 800;
+
+const defaultTitleStyle = {
+  transition: `opacity ${duration1}ms ease-in-out 0.5s`,
+  opacity: 0,
+};
+
+const transitionTitleStyles = {
+  entering: { opacity: 0 },
+  entered: { opacity: 1 },
+};
+
+const defaultSubtitleStyle = {
+  transition: `all ${duration2}ms ease-in-out 0.3s`,
+  transform: `translateY(40px)`,
+  opacity: 0,
+};
+
+const transitionSubtitleStyles = {
+  entering: { transform: `translateY(40px)`, opacity: 0 },
+  entered: { transform: `translateY(0)`, opacity: 1 },
+};
+
+const defaultBgStyle = {
+  transition: `all ${duration2}ms ease-in-out`,
+  transform: `translateY(100%)`,
+};
+
+const transitionBgStyles = {
+  entering: { transform: `translateY(100%)` },
+  entered: { transform: `translateY(0)` },
+};
+//#endregion
+
 export const Intro = () => {
-  const duration1 = 400; // Animation duration in milliseconds
-  const duration2 = 800; // Animation duration in milliseconds
-
-  const defaultTitleStyle = {
-    transition: `opacity ${duration1}ms ease-in-out 0.5s`,
-    opacity: 0,
-  };
-
-  const transitionTitleStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-  };
-
-  const defaultSubtitleStyle = {
-    transition: `all ${duration2}ms ease-in-out 0.3s`,
-    transform: `translateY(40px)`,
-    opacity: 0,
-  };
-
-  const transitionSubtitleStyles = {
-    entering: { transform: `translateY(40px)`, opacity: 0 },
-    entered: { transform: `translateY(0)`, opacity: 1},
-  };
-
   return (
     <TransitionGroup>
-      {/* <CSSTransition in={true} appear={true} timeout={400} classNames="fade"> */}
       <div className="Intro">
         <h1 className="visually-hidden">Ivan Inozemtsev</h1>
 
         <div className="Intro__content">
           <div className="Intro__holder">
-            <CSSTransition in={true} appear={true} timeout={duration1}>
+            <CSSTransition in appear timeout={duration1}>
               {(state) => (
                 <img
                   className="Intro__title-img"
@@ -48,9 +60,10 @@ export const Intro = () => {
               )}
             </CSSTransition>
 
-            <CSSTransition in={true} appear={true} timeout={duration2}>
+            <CSSTransition in appear timeout={duration2}>
               {(state) => (
-                <p className="Intro__subtitle"
+                <p
+                  className="Intro__subtitle"
                   style={{
                     ...defaultSubtitleStyle,
                     ...transitionSubtitleStyles[state],
@@ -63,8 +76,25 @@ export const Intro = () => {
             </CSSTransition>
           </div>
         </div>
+
+        <CSSTransition in appear timeout={duration2}>
+          {(state) => (
+            <div
+              className="Intro__bg-container"
+              style={{
+                ...defaultBgStyle,
+                ...transitionBgStyles[state],
+              }}
+            >
+              <img
+                className="Intro__bg-image"
+                src="./images/intro/me.webp"
+                alt="Ivan Inozemtsev"
+              />
+            </div>
+          )}
+        </CSSTransition>
       </div>
-      {/* </CSSTransition> */}
     </TransitionGroup>
   );
 };

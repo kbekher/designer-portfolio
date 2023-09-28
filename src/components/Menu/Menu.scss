@@ -3,12 +3,13 @@
 .Menu {
   position: fixed;
   padding-top: $header-height;
+  background-color: rgba(253, 215, 207, 0.9);
+
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(253, 215, 207, 0.9);
-
+  z-index: 1;
   opacity: 1;
   transition: $transition;
 

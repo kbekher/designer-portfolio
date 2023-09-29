@@ -1,7 +1,7 @@
 @import '../../styles/utils';
 
 .Intro {
-  height: 100vh;
+  height: 100dvh;
   font-family: 'Oswald', sans-serif;
 
   display: flex;
@@ -80,7 +80,8 @@
     height: 100%;
     background-image: url('../../../public/images/intro/me.webp');
     background-repeat: no-repeat;
-    background-size: contain;
+   background-size: contain;
+background-attachment: fixed;
     background-position: bottom center;
 
     @include onTablet {

@@ -84,10 +84,10 @@ export const Intro = () => (
         {(state) => (
           <div
             className="Intro__bg-container"
-            // style={{
-            //   ...defaultBgStyle,
-            //   ...transitionBgStyles[state],
-            // }}
+            style={{
+              ...defaultBgStyle,
+              ...transitionBgStyles[state],
+            }}
           >
           </div>
         )}

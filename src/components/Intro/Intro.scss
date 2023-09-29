@@ -1,11 +1,7 @@
 @import '../../styles/utils';
 
 .Intro {
-  min-height: 640px;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  // height: 100dvh;
+  height: 100dvh;
   font-family: 'Oswald', sans-serif;
 
   display: flex;
@@ -78,20 +74,16 @@
 
   &__bg-container {
     margin: 0 auto;
-    width: 240px;
-    height: 300px;
-    // max-width: 240px;
-    // max-height: 300px;
-    // width: 100%;
-    // height: 100%;
+    max-width: 240px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
     background-image: url('../../../public/images/intro/me.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center bottom;
+    background-position: bottom center;
 
     @include onTablet {
-      width: 100%;
-      height: 100%;
       max-width: 380px;
       max-height: 340px;
     }

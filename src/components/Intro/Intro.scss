@@ -83,7 +83,7 @@
     background-image: url('../../../public/images/intro/me.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom center;
+    background-position: center;
 
     @include onTablet {
       width: 100%;

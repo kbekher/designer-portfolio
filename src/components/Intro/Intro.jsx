@@ -89,11 +89,6 @@ export const Intro = () => (
               ...transitionBgStyles[state],
             }}
           >
-            {/* <img
-              className="Intro__bg-image"
-              src="./images/intro/me.webp"
-              alt="Ivan Inozemtsev"
-            /> */}
           </div>
         )}
       </CSSTransition>

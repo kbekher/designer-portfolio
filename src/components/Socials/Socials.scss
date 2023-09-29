@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
 
-  * > & :not(:last-child) {
+  *>& :not(:last-child) {
     margin-right: 30px;
 
     @include onTablet {
@@ -26,5 +26,9 @@
 
   @include onTablet {
     @include square(38px);
+  }
+
+  @include onDesktop {
+    @include square(54px);
   }
 }

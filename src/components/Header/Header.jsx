@@ -21,7 +21,7 @@ const transitionStyles = {
 //#endregion
 
 export const Header = () => (
-  <Transition in={true} appear={true} timeout={duration}>
+  <Transition in appear timeout={duration}>
     {(state) => (
       <header
         className="Header slide-in-component"

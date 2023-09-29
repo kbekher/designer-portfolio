@@ -3,10 +3,10 @@
 body {
   padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
   background-color: $color-background;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, Helvetica, Arial, sans-serif;
 }
 
 .App {
-  font-family: 'Oswald', sans-serif;
   font-weight: 400;
   color: $color-branding;
 }

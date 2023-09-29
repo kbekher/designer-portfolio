@@ -5,8 +5,9 @@
   left: 0px;
   top: 0px;
   width: 100%;
-  height: $header-height;
-  z-index: 1000;
+  height: auto;
+  min-height: $header-height;
+  z-index: 6;
 
   &__content {
     height: 100%;

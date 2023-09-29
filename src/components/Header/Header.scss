@@ -8,14 +8,30 @@
   height: $header-height;
   z-index: 1000;
 
+  &__content {
+    height: 100%;
+    position: relative;
+
+    @include onTablet {
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include onDesktop {
+      padding: 0 40px;
+    }
+  }
+
   &__logo {
     position: absolute;
     left: 20px;
     top: 20px;
-  }
 
-  &__nav {
-    display: none;
+    @include onTablet  {
+      position: static;
+    }
   }
 
   &__hamburger {
@@ -32,7 +48,18 @@
     }
   }
 
+  &__nav,
   &__socials {
     display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

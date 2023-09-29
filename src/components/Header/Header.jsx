@@ -7,7 +7,7 @@ import { Socials } from '../Socials';
 import './Header.scss';
 
 //#region animations
-const duration = 400; // Animation duration in milliseconds
+const duration = 500; // Animation duration in milliseconds
 
 const defaultStyle = {
   transition: `transform ${duration}ms ease-in-out`,
@@ -30,20 +30,22 @@ export const Header = () => (
           ...transitionStyles[state],
         }}
       >
-        <div className="Header__logo">
-           <Logo />
-        </div>
-       
-        <div className="Header__nav">
-          <Nav />
-        </div>
+        <div className="Header__content">
+          <div className="Header__logo">
+            <Logo />
+          </div>
 
-        <div className="Header__socials" >
-          <Socials />
-        </div>
+          <div className="Header__nav">
+            <Nav />
+          </div>
 
-        <div className="Header__hamburger">
-          <Hamburger />
+          <div className="Header__socials" >
+            <Socials />
+          </div>
+
+          <div className="Header__hamburger">
+            <Hamburger />
+          </div>
         </div>
       </header>
     )}

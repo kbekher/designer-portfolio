@@ -7,10 +7,18 @@
 
   * > & :not(:last-child) {
     margin-right: 30px;
+
+    @include onTablet {
+      margin-right: 10px;
+    }
   }
 }
 
 .SocialLink {
   @extend %background-img;
   @include square(54px);
+
+  @include onTablet {
+    @include square(38px);
+  }
 }

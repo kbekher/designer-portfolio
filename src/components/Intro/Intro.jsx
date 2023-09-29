@@ -30,11 +30,12 @@ const transitionSubtitleStyles = {
 const defaultBgStyle = {
   transition: `all ${duration2}ms ease-in-out`,
   transform: `translateY(100%)`,
+  opacity: 0,
 };
 
 const transitionBgStyles = {
-  entering: { transform: `translateY(100%)` },
-  entered: { transform: `translateY(0)` },
+  entering: { transform: `translateY(100%)`, opacity: 0 },
+  entered: { transform: `translateY(0)`, opacity: 1 },
 };
 //#endregion
 
@@ -58,22 +59,25 @@ export const Intro = () => (
               />
             )}
           </CSSTransition>
+        </div>
 
-          <CSSTransition in appear timeout={duration2}>
-            {(state) => (
-              <p
-                className="Intro__subtitle"
-                style={{
-                  ...defaultSubtitleStyle,
-                  ...transitionSubtitleStyles[state],
-                }}
-              >
+        <CSSTransition in appear timeout={duration2}>
+          {(state) => (
+            <div
+              className="Intro__sub-container"
+              style={{
+                ...defaultSubtitleStyle,
+                ...transitionSubtitleStyles[state],
+              }}
+            >
+              <p className="Intro__subtitle">
                 Ukrainian designer & illustrator based in Germany.
                 Please visit my Instagram to keep up with my latest work.
               </p>
-            )}
-          </CSSTransition>
-        </div>
+            </div>
+
+          )}
+        </CSSTransition>
       </div>
 
       <CSSTransition in appear timeout={duration2}>
@@ -85,11 +89,11 @@ export const Intro = () => (
               ...transitionBgStyles[state],
             }}
           >
-            <img
+            {/* <img
               className="Intro__bg-image"
               src="./images/intro/me.webp"
               alt="Ivan Inozemtsev"
-            />
+            /> */}
           </div>
         )}
       </CSSTransition>

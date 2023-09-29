@@ -1,7 +1,11 @@
 @import '../../styles/utils';
 
 .Intro {
-  height: 100dvh;
+  min-height: 640px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  // height: 100dvh;
   font-family: 'Oswald', sans-serif;
 
   display: flex;
@@ -83,7 +87,7 @@
     background-image: url('../../../public/images/intro/me.webp');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: center bottom;
 
     @include onTablet {
       width: 100%;

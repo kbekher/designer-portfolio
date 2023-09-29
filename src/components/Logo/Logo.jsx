@@ -5,9 +5,10 @@ import { MenuContext } from '../../MenuContext';
 
 export const Logo = () => {
   const {isMenuOpen, setIsMenuOpen} = useContext(MenuContext);
-
+  
   const handleClick = () => {
     if (!isMenuOpen) {
+      scroll.scrollToTop();
       return;
     }
 

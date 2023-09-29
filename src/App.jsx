@@ -13,10 +13,7 @@ export const App = () => {
   const { isMenuOpen } = useContext(MenuContext);
 
   return (
-    <div className="App" style={{
-        'overflow': isMenuOpen ? 'hidden' : ''
-      }}
-    >
+    <div className="App" style={{'overflow': isMenuOpen ? 'hidden' : ''}}>
       <Header />
 
       {isMenuOpen && (

@@ -1,8 +1,13 @@
 @import './styles/utils';
 
-.App {
+body {
+  padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
   background-color: $color-background;
+}
+
+.App {
   font-family: 'Oswald', sans-serif;
+  font-weight: 400;
   color: $color-branding;
 }
 

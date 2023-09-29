@@ -7,7 +7,7 @@ import { Socials } from '../Socials';
 import './Header.scss';
 
 //#region animations
-const duration = 500; // Animation duration in milliseconds
+const duration = 800; // Animation duration in milliseconds
 
 const defaultStyle = {
   transition: `transform ${duration}ms ease-in-out`,

@@ -17,6 +17,12 @@
 .SocialLink {
   @extend %background-img;
   @include square(54px);
+  transition: $transition;
+  cursor: pointer;
+
+  &:hover {
+    transform: $icons-hover;
+  }
 
   @include onTablet {
     @include square(38px);

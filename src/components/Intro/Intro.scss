@@ -52,6 +52,10 @@
       height: 240px;
       background-image: url('../../../public/images/intro/cloud.webp');
     }
+
+    @include onDesktop {
+      max-width: 360px;
+    }
   }
 
   &__subtitle {
@@ -67,6 +71,11 @@
       top: 10%;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    @include onDesktop {
+      top: 0;
+      font-size: 20px;
     }
   }
 

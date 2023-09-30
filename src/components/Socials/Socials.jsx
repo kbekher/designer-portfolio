@@ -1,5 +1,4 @@
 import socialLinks from '../../utils/links';
-
 import './Socials.scss';
 
 const SocialLink = ({ name, url }) => {

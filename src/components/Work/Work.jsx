@@ -1,3 +1,4 @@
+import projectsList from '../../utils/projects.json';
 import './Work.scss';
 
 export const Work = () => {
@@ -17,6 +18,15 @@ export const Work = () => {
         </div>
       </div>
 
+      <div className="Work__projects">
+        {projectsList.map(item => (
+          <div className="Work__project-section" key={item.id}>
+
+          </div>
+        ))}
+
+     
+      </div>
     </div>
   );
 };

@@ -42,9 +42,10 @@ const transitionBgStyles = {
 export const Intro = () => (
   <TransitionGroup>
     <div className="Intro">
-      <h1 className="visually-hidden">Ivan Inozemtsev</h1>
 
-      <div className="Intro__content">
+      <h1 className="visually-hidden">Ivan Inozemtsev</h1>
+<div className="Intro__inner">
+<div className="Intro__content">
         <div className="Intro__holder">
           <CSSTransition in appear timeout={duration1}>
             {(state) => (
@@ -92,6 +93,8 @@ export const Intro = () => (
           </div>
         )}
       </CSSTransition>
+</div>
+      
     </div>
   </TransitionGroup>
 );

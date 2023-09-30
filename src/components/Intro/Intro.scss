@@ -2,10 +2,18 @@
 
 .Intro {
   font-family: 'Oswald', sans-serif;
-  height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+
+ 
+
+  &__inner {
+    height: 100%;
+    height: -webkit-fill-available;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__content {
     flex-grow: 1;

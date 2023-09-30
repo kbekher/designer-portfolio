@@ -2,48 +2,88 @@
 
 .Project {
   height: $slider-height;
-  position: relative;
+
+  @include onTablet {
+    height: $slider-height-tablet;
+  }
+
+  @include onDesktop {
+    height: $slider-height-desktop;
+  }
 
   &__slide {
     width: 100%;
     height: $slider-height;
+    position: relative;
+    cursor: pointer;
+
+    @include onTablet {
+      height: $slider-height-tablet;
+    }
+  
+    @include onDesktop {
+      height: $slider-height-desktop;
+    }
+  }
+
+  &__image-container {
+    width: 100%;
+    height: 100%;
   }
 
   &__image {
     width: 100%;
     height: $slider-height;
     object-fit: cover;
+
+    @include onTablet {
+      height: $slider-height-tablet;
+    }
+  
+    @include onDesktop {
+      height: $slider-height-desktop;
+    }
+  }
+
+  &__content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-background-project;
+    transition: $transition;
+    opacity: 0;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+
+    @include onTablet {
+      font-size: 36px;
+    }
   }
 }
 
 //slideshow
 .each-slide {
+  cursor: pointer;
   position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.each-slide > div {
   width: 100%;
-}
 
-.each-slide > div img {
-  width: 100%;
-  height: $slider-height;
-  object-fit: cover;
+  @include onTablet {
+    width: 50vw;
+  }
 }
 
 .react-slideshow-fadezoom-images-wrap {
-  width: 100% !important; 
+  width: 100% !important;
 }
-
-// .each-slide p {
-//   width: 25%;
-//   font-size: 1em;
-//   display: flex;
-//   text-align: center;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 0;
-//   background: #adceed;
-// }

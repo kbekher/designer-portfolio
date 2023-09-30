@@ -60,3 +60,30 @@
     flex-direction: column;
   }
 }
+
+//grid 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include onTablet {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+.col {
+  height: 100%;
+}
+
+.half-width {
+  grid-template-rows: 1fr 1fr;
+}
+
+.full-width {
+  grid-template-rows: 1fr;
+}

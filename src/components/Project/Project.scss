@@ -1,0 +1,49 @@
+@import '../../styles/utils';
+
+.Project {
+  height: $slider-height;
+  position: relative;
+
+  &__slide {
+    width: 100%;
+    height: $slider-height;
+  }
+
+  &__image {
+    width: 100%;
+    height: $slider-height;
+    object-fit: cover;
+  }
+}
+
+//slideshow
+.each-slide {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.each-slide > div {
+  width: 100%;
+}
+
+.each-slide > div img {
+  width: 100%;
+  height: $slider-height;
+  object-fit: cover;
+}
+
+.react-slideshow-fadezoom-images-wrap {
+  width: 100% !important; 
+}
+
+// .each-slide p {
+//   width: 25%;
+//   font-size: 1em;
+//   display: flex;
+//   text-align: center;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0;
+//   background: #adceed;
+// }

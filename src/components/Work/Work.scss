@@ -54,4 +54,9 @@
       line-height: 38px;
     }
   }
+
+  &__project-section {
+    display: flex;
+    flex-direction: column;
+  }
 }

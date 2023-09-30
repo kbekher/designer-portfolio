@@ -21,11 +21,9 @@ export const Work = () => {
       <div className="Work__projects">
         {projectsList.map(item => (
           <div className="Work__project-section" key={item.id}>
-
+            
           </div>
         ))}
-
-     
       </div>
     </div>
   );

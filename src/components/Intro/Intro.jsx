@@ -1,6 +1,7 @@
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import './Intro.scss';
+import { useEffect, useState } from 'react';
 
 //#region animations
 const duration1 = 400; // Animation duration in milliseconds
@@ -39,9 +40,26 @@ const transitionBgStyles = {
 };
 //#endregion
 
-export const Intro = () => (
+export const Intro = () => {
+  const [vh, setVh] = useState(window.innerHeight * 0.01);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setVh(window.innerHeight * 0.01);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+return (
   <TransitionGroup>
-    <div className="Intro">
+    <div className="Intro"   style={{
+        height: `calc(${vh}px * 100)`,
+      }}
+      >
       <h1 className="visually-hidden">Ivan Inozemtsev</h1>
 
       <div className="Intro__content">
@@ -95,3 +113,4 @@ export const Intro = () => (
     </div>
   </TransitionGroup>
 );
+          };

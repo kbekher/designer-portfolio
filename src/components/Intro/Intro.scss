@@ -2,7 +2,8 @@
 
 .Intro {
   font-family: 'Oswald', sans-serif;
-  height: 100vh;
+  // height: 100vh;  
+  // max-height: -webkit-fill-available;
 
   display: flex;
   flex-direction: column;
@@ -95,7 +96,6 @@
     }
 
     @include onDesktop {
-      max-width: 360px;
       max-height: 320px;
     }
   }

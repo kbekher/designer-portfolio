@@ -5,9 +5,9 @@ html {
 }
 
 body {
-  padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
-  background-color: $color-background;
+  // padding-top: env(safe-area-inset-top); /* This ensures the content starts below the status bar */
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro", Roboto, Helvetica, Arial, sans-serif;
+  background-color: $color-background;
 }
 
 .body--with-menu {

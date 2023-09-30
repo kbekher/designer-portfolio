@@ -11,11 +11,11 @@ const duration = 800; // Animation duration in milliseconds
 
 const defaultStyle = {
   transition: `transform ${duration}ms ease-in-out`,
-  transform: 'translateY(-100%)',
+  transform: 'translateY(-110%)',
 };
 
 const transitionStyles = {
-  entering: { transform: 'translateY(-100%)' },
+  entering: { transform: 'translateY(-110%)' },
   entered: { transform: 'translateY(0%)' },
 };
 //#endregion

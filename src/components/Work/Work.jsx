@@ -16,6 +16,7 @@ export const Work = () => {
           <h2 className="Work__intro-title">Let's dive into my world!</h2>
         </div>
       </div>
+
     </div>
   );
 };

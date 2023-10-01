@@ -58,8 +58,15 @@ export const Work = () => {
           </div>
 
           <div className="Work__project-section row">
-            <div className="col half-width"></div>
-            <div className="col half-width"></div>
+          {projectsList[4].projects.map(project => (
+              <div className="col half-width" key={project.name}>
+                <Project 
+                  project={project}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            ))}
           </div>
 
           <div className="Work__project-section row full-width"></div>

@@ -22,6 +22,7 @@ export const Nav = () => {
           <Link
             to="work"
             smooth={true}
+            delay={0}
             duration={250}
             className="Nav__link"
             onClick={handleClick}
@@ -33,6 +34,7 @@ export const Nav = () => {
           <Link
             to="about"
             smooth={true}
+            delay={0}
             duration={250}
             className="Nav__link"
             onClick={handleClick}

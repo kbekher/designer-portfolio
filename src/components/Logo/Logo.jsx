@@ -4,27 +4,36 @@ import './Logo.scss';
 import { MenuContext } from '../../MenuContext';
 
 export const Logo = () => {
-  const {isMenuOpen, setIsMenuOpen} = useContext(MenuContext);
-  
+  const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
+
   const handleClick = () => {
     if (!isMenuOpen) {
-      scroll.scrollToTop();
+      scroll.scrollToTop({
+        duration: 250,
+        delay: 0,
+        smooth: true,
+      });
       return;
     }
 
     setIsMenuOpen(false)
-    scroll.scrollToTop();
+    scroll.scrollToTop({
+      duration: 250,
+      delay: 0,
+      smooth: true,
+    });
   }
 
   return (
     <button
       type="button"
-      className="Logo" 
+      className="Logo"
       onClick={handleClick}
+
     >
       <img
         className="Logo__image"
-        src="./images/logo.webp"
+        src="./images/logo.svg"
         alt="logo"
       />
     </button>

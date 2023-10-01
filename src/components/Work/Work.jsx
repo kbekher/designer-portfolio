@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { Fade } from 'react-slideshow-image';
 import projectsList from '../../utils/projects.json';
 import { Project } from '../Project';
 import './Work.scss';
 
 export const Work = () => {
   const [selecetdItem, setSelectedItem] = useState(null);
-
 
   const handleItemClick = (item) => {
     if (selecetdItem === item) {
@@ -32,65 +32,64 @@ export const Work = () => {
       </div>
 
       <div className="Work__projects">
-        <div className="grid">
-          <div className="row">
-            {projectsList[0].projects.map(project => (
-              <div className="col half-width" key={project.name}>
-                <Project 
-                  project={project}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-            ))}
-          </div>
+        {/* Simmons-Lasso */}
+        <div className="Work__section Work__section--split">
+          <div className="Work__project"></div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row full-width"></div>
+        {/* Amster */}
+        <div className="Work__section Work__section--full">
+        <div className="Work__project"></div>
+        </div>
 
-          <div className="row">
-            <div className="col half-width"></div>
-            <div className="col half-width"></div>
-          </div>
+        {/* Poster1 */}
+        <div className="Work__section Work__section--split">
+          <div className="Work__project">slider</div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row">
-            <div className="col half-width"></div>
-            <div className="col half-width"></div>
-          </div>
+        {/* Poster2 */}
+        <div className="Work__section Work__section--split">
+          <div className="Work__project">slider</div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row">
-          {projectsList[4].projects.map(project => (
-              <div className="col half-width" key={project.name}>
-                <Project 
-                  project={project}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-            ))}
-          </div>
+        {/* Awa-Fatboy */}
+        <div className="Work__section Work__section--split">
+          <div className="Work__project">slider</div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row full-width"></div>
+        {/* MDF */}
+        <div className="Work__section Work__section--full">
+          <div className="Work__project">slider-mobile</div>
+          
+          <div className="Work__project">slider</div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row">
-          {projectsList[6].projects.map(project => (
-              <div className="col half-width" key={project.name}>
-                <Project 
-                  project={project}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-            ))}
-          </div>
+        {/* Tropicfeel-Organic */}
+        <div className="Work__section Work__section--split">
+          <div className="Work__project"></div>
+          <div className="Work__project">slider</div>
+        </div>
 
-          <div className="row full-width"></div>
+         {/* Faces */}
+         <div className="Work__section Work__section--full">
+         <div className="Work__project"></div>
+        </div>
 
-          <div className="row">
-            <div className="col half-width"></div>
-            <div className="col half-width"></div>
-          </div>
+         {/* Kids */}
+         <div className="Work__section Work__section--full">
+         <div className="Work__project"></div>
+         <div className="Work__project"></div>
+        </div>
 
-          <div className="row full-width"></div>
+
+         {/* Bike */}
+         <div className="Work__section Work__section--full">
+         <div className="Work__project"></div>
         </div>
       </div>
     </div>

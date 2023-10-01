@@ -1,45 +1,151 @@
 [
-  { "id": 0,  "projects": [
-    {"name": "Daniel Simmons", "images": ["simmons"] },
-    {"name": "Lasso Way", "images": ["lasso1", "lasso2"] }
-  ]},
-  { "id": 1, "projects": [
-    {"name": "Amsterdam's Enchanting Facades", "images": ["amster"] }
-  ]},
-  { "id": 2, "projects": [
-    {"name": "Divchata Agency", "images": ["divchata"] },
-    {"name": "Star Porgis", "images": ["porgis"] },
-    {"name": "Which Einstein are you today?", "images": ["einstein"] },
-    {"name": "Divided Layers", "images": ["layers"] },
-    {"name": "Film Speed Lab", "images": ["fsl"] },
-    {"name": "Fragment Design", "images": ["fragment"] }
-  ]},
-  { "id": 3, "projects": [
-    {"name": "Switzerland", "images": ["switzerland"] },
-    {"name": "Black and White spots", "images": ["spots"] },
-    {"name": "Each day's potential", "images": ["potential"] },
-    {"name": "b-n Studio", "images": ["icy"] },
-    {"name": "poster", "images": ["poster"] },
-    {"name": "RVTC Rösterei Vier", "images": ["rvtc"] }
-  ]},
-  { "id": 4, "projects": [
-    {"name": "Accidentlly Wes Anderson", "images": ["awa1", "awa2", "awa3"] },
-    {"name": "Fatboy the Original", "images": ["fatboy1", "fatboy2", "fatboy3"] }
-  ]},
-  { "id": 5, "projects": [
-    {"name": "Media Development Foundation (Visual identity)", "images": ["mdf1", "mdf2", "mdf3", "mdf4"] }
-  ]},
-  { "id": 6, "projects": [
-    {"name": "Tropicfeel Go Beyond Travel", "images": ["tropicfeel"] },
-    {"name": "Organic Chocolatte (Visual identity)", "images": ["organic1", "organic2", "organic3"] }
-  ]},
-  { "id": 7, "projects": [
-    {"name": "Every Face Tells a Unique Story, Together We Write History", "images": ["faces"] }
-  ]},
-  { "id": 8,  "projects": [
-    {"name": "Kids", "images": ["kids1", "kids2"] }
-  ]},
-  { "id": 9,  "projects": [
-    {"name": "The Electric Bicycle Adventure", "images": ["bike"] }
-  ]}
+  {
+    "name": "Daniel Simmons",
+    "images": [
+      "simmons"
+    ]
+  },
+  {
+    "name": "Lasso Way",
+    "images": [
+      "lasso1",
+      "lasso2"
+    ]
+  },
+  {
+    "name": "Amsterdam's Enchanting Facades",
+    "images": [
+      "amster"
+    ]
+  },
+  {
+    "name": "Divchata Agency",
+    "images": [
+      "divchata"
+    ]
+  },
+  {
+    "name": "Star Porgis",
+    "images": [
+      "porgis"
+    ]
+  },
+  {
+    "name": "Which Einstein are you today?",
+    "images": [
+      "einstein"
+    ]
+  },
+  {
+    "name": "Divided Layers",
+    "images": [
+      "layers"
+    ]
+  },
+  {
+    "name": "Film Speed Lab",
+    "images": [
+      "fsl"
+    ]
+  },
+  {
+    "name": "Fragment Design",
+    "images": [
+      "fragment"
+    ]
+  },
+  {
+    "name": "Switzerland",
+    "images": [
+      "switzerland"
+    ]
+  },
+  {
+    "name": "Black and White spots",
+    "images": [
+      "spots"
+    ]
+  },
+  {
+    "name": "Each day's potential",
+    "images": [
+      "potential"
+    ]
+  },
+  {
+    "name": "b-n Studio",
+    "images": [
+      "icy"
+    ]
+  },
+  {
+    "name": "poster",
+    "images": [
+      "poster"
+    ]
+  },
+  {
+    "name": "RVTC Rösterei Vier",
+    "images": [
+      "rvtc"
+    ]
+  },
+  {
+    "name": "Accidentlly Wes Anderson",
+    "images": [
+      "awa1",
+      "awa2",
+      "awa3"
+    ]
+  },
+  {
+    "name": "Fatboy the Original",
+    "images": [
+      "fatboy1",
+      "fatboy2",
+      "fatboy3"
+    ]
+  },
+  {
+    "name": "Media Development Foundation (Visual identity)",
+    "images": [
+      "mdf1",
+      "mdf2",
+      "mdf3",
+      "mdf4"
+    ]
+  },
+  {
+    "name": "Tropicfeel Go Beyond Travel",
+    "images": [
+      "tropicfeel"
+    ]
+  },
+  {
+    "name": "Organic Chocolatte (Visual identity)",
+    "images": [
+      "organic1",
+      "organic2",
+      "organic3"
+    ]
+  },
+  {
+    "name": "Every Face Tells a Unique Story, Together We Write History",
+    "images": [
+      "faces"
+    ]
+  },
+  {
+    "name": "Kids",
+    "images": [
+      "kids1",
+      "kids2"
+    ]
+  },
+  {
+    "name": "The Electric Bicycle Adventure",
+    "images": [
+      "bike"
+    ]
+  }
 ]

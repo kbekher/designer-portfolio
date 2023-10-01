@@ -1,3 +1,119 @@
+@import '../../styles/utils';
+
 .About {
+  padding-top: 60px;
+  color: $color-branding;
+  font-weight: 300;
+  line-height: 1.5;
+
+  &__content {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+
+    @include onDesktop {
+      padding: 50px 60px;
+    }
+  }
+
+  &__section {
+    &:first-child {
+      margin-bottom: 60px;
+
+      @include onTablet {
+        display: flex;
+        flex-direction: row;
   
+        & > * {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  &__subtitle {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+    @include onTablet {
+      margin: 0;
+    }
+
+    &--small {
+      font-size: 20px;
+      margin-bottom: 8px;
+
+      @include onTablet  {
+        text-decoration: underline;
+      }
+    }
+
+    @include onDesktop {
+      font-size: 32px;
+    }
+  }
+
+  &__img-container {
+    width: 100%;
+    height: auto;
+    margin-bottom: 28px;
+
+    @include onTablet {
+      max-width: 330px;
+      margin-bottom: 40px;
+    }
+
+    @include onDesktop {
+      max-width: 430px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__paragpraph {
+    font-size: 24px;
+
+    @include onTablet {
+      font-size: 30px;
+    }
+
+    @include onDesktop {
+      font-size: 40px;
+    }
+  }
+
+  &__list {}
+
+  &__list-item {
+    margin-bottom: 30px;
+
+    @include onTablet {
+      display: flex;
+      align-items: center;
+
+      & > * {
+        width: 50%;
+      }
+    }
+  }
+
+  &__contact-link,
+  &__certificate-link {
+    font-size: 22px;
+    text-decoration: underline;
+
+    @include onDesktop {
+      font-size: 26px;
+    }
+  }
+
+  &__contact-link {
+    display: block;
+
+  }
+
 }

@@ -1,5 +1,4 @@
 import { useMemo } from 'react';
-import { Fade } from 'react-slideshow-image';
 import './Project.scss';
 
 export const Project = ({ project, selecetdItem, onItemSelect }) => {

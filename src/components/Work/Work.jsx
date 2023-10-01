@@ -1,19 +1,15 @@
-import { useState } from 'react';
-import { Fade } from 'react-slideshow-image';
-import projectsList from '../../utils/projects.json';
-import { Project } from '../Project';
 import './Work.scss';
 
 export const Work = () => {
-  const [selecetdItem, setSelectedItem] = useState(null);
+  // const [selecetdItem, setSelectedItem] = useState(null);
 
-  const handleItemClick = (item) => {
-    if (selecetdItem === item) {
-      setSelectedItem(null); // Deselect if already selected
-    } else {
-      setSelectedItem(item); // Otherwise, select the child item
-    }
-  }
+  // const handleItemClick = (item) => {
+  //   if (selecetdItem === item) {
+  //     setSelectedItem(null); // Deselect if already selected
+  //   } else {
+  //     setSelectedItem(item); // Otherwise, select the child item
+  //   }
+  // }
 
   return (
     <div className="Work" id="work">

@@ -29,11 +29,10 @@ export const Logo = () => {
       type="button"
       className="Logo"
       onClick={handleClick}
-
     >
       <img
         className="Logo__image"
-        src="./images/logo.svg"
+        src="./images/logo.webp"
         alt="logo"
       />
     </button>

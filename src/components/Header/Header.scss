@@ -8,6 +8,7 @@
   height: $header-height;
   z-index: 1000;
 
+
   &__content {
     height: 100%;
     position: relative;
@@ -20,7 +21,7 @@
     }
 
     @include onDesktop {
-      padding: 30px 60px 0;
+      padding: 0 60px;
     }
   }
 

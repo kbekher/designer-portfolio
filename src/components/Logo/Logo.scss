@@ -10,19 +10,8 @@
     transform: $icons-hover;
   }
 
-  @include onDesktop {
-    @include square(70px);
-  }
-
   &__image {
-    // @include square(54px);
+    @include square(54px);
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit:contain;
-
-    @include onDesktop {
-      @include square(70px);
-    }
   }
 }

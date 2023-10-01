@@ -33,7 +33,7 @@ export const Work = () => {
 
       <div className="Work__projects">
         <div className="grid">
-          <div className="Work__project-section row">
+          <div className="row">
             {projectsList[0].projects.map(project => (
               <div className="col half-width" key={project.name}>
                 <Project 
@@ -57,7 +57,7 @@ export const Work = () => {
             <div className="col half-width"></div>
           </div>
 
-          <div className="Work__project-section row">
+          <div className="row">
           {projectsList[4].projects.map(project => (
               <div className="col half-width" key={project.name}>
                 <Project 

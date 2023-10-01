@@ -17,16 +17,17 @@ export const Project = ({ project, selecetdItem, onItemSelect}) => {
 
   return (
     <div className="Project">
-      {urls.length !== 1 ? (
+      {urls.length > 1 ? (
         <Fade
           arrows={false}
           canSwipe={false}
+          pauseOnHover={false}
           autoplay={!isSelected}
         >
           {urls.map(url => (
             <div
               key={url}
-              className="each-slide"
+              className="Project__wrapper Project__wrapper--slide"
               onClick={handleClick} 
             >
               <div className="Project__image-container">
@@ -47,7 +48,7 @@ export const Project = ({ project, selecetdItem, onItemSelect}) => {
           ))}
         </Fade>
       ) : (
-        <div className="Project__slide" onClick={handleClick}>
+        <div className="Project__wrapper" onClick={handleClick}>
           <div className="Project__image-container">
             <img
               src={urls[0]}

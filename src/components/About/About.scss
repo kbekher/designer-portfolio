@@ -23,11 +23,17 @@
       @include onTablet {
         display: flex;
         flex-direction: row;
-  
-        & > * {
+
+        &>* {
           width: 50%;
         }
       }
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -44,7 +50,7 @@
       font-size: 20px;
       margin-bottom: 8px;
 
-      @include onTablet  {
+      @include onTablet {
         text-decoration: underline;
       }
     }
@@ -93,7 +99,7 @@
       display: flex;
       align-items: center;
 
-      & > * {
+      &>* {
         width: 50%;
       }
     }
@@ -112,5 +118,14 @@
 
   &__contact-link {
     display: block;
+  }
+
+  &__form {
+    max-width: 600px;
+    width: 100%;
+
+    @include onTablet {
+      margin-top: 20px;
+    }
   }
 }

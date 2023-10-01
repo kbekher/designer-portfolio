@@ -1,4 +1,5 @@
 import socialLinks from '../../utils/links.json';
+import { Form } from '../Form/Form';
 
 import './About.scss';
 
@@ -81,7 +82,7 @@ export const About = () => {
           <h3 className="About__subtitle">Stay informed</h3>
 
           <div className="About__form">
-            {/* <Form /> */}
+            <Form />
           </div>
         </div>
       </div>

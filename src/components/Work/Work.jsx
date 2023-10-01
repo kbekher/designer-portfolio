@@ -45,14 +45,14 @@ export const Work = () => {
             ))}
           </div>
 
-          <div className="Work__project-section row full-width"></div>
+          <div className="row full-width"></div>
 
-          <div className="Work__project-section row">
+          <div className="row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
 
-          <div className="Work__project-section row">
+          <div className="row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
@@ -69,21 +69,28 @@ export const Work = () => {
             ))}
           </div>
 
-          <div className="Work__project-section row full-width"></div>
+          <div className="row full-width"></div>
 
-          <div className="Work__project-section row">
+          <div className="row">
+          {projectsList[6].projects.map(project => (
+              <div className="col half-width" key={project.name}>
+                <Project 
+                  project={project}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="row full-width"></div>
+
+          <div className="row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
 
-          <div className="Work__project-section row full-width"></div>
-
-          <div className="Work__project-section row">
-            <div className="col half-width"></div>
-            <div className="col half-width"></div>
-          </div>
-
-          <div className="Work__project-section row full-width"></div>
+          <div className="row full-width"></div>
         </div>
       </div>
     </div>

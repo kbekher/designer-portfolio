@@ -1,9 +1,19 @@
+import { useState } from 'react';
 import projectsList from '../../utils/projects.json';
 import { Project } from '../Project';
 import './Work.scss';
 
 export const Work = () => {
+  const [selecetdItem, setSelectedItem] = useState(null);
 
+
+  const handleItemClick = (item) => {
+    if (selecetdItem === item) {
+      setSelectedItem(null); // Deselect if already selected
+    } else {
+      setSelectedItem(item); // Otherwise, select the child item
+    }
+  }
 
   return (
     <div className="Work" id="work">
@@ -22,44 +32,50 @@ export const Work = () => {
       </div>
 
       <div className="Work__projects">
-        {/* {projectsList.map(item => (
-          <div className="Work__project-section" key={item.id}>
-            <ProjectSection section={item} />
-          </div>
-        ))} */}
         <div className="grid">
           <div className="Work__project-section row">
             {projectsList[0].projects.map(project => (
               <div className="col half-width" key={project.name}>
                 <Project 
                   project={project}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
                 />
               </div>
             ))}
           </div>
+
           <div className="Work__project-section row full-width"></div>
+
           <div className="Work__project-section row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
+
           <div className="Work__project-section row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
+
           <div className="Work__project-section row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
+
           <div className="Work__project-section row full-width"></div>
+
           <div className="Work__project-section row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
+
           <div className="Work__project-section row full-width"></div>
+
           <div className="Work__project-section row">
             <div className="col half-width"></div>
             <div className="col half-width"></div>
           </div>
+
           <div className="Work__project-section row full-width"></div>
         </div>
       </div>

@@ -1,22 +1,19 @@
+import { useMemo} from 'react';
 import { Fade } from 'react-slideshow-image';
 import './Project.scss';
-import { useMemo, useState } from 'react';
 
-export const Project = ({ project}) => {
-  const [showTitle, setShowTitle] = useState(false)
+export const Project = ({ project, selecetdItem, onItemSelect}) => {
   const { name, images } = project;
 
   const urls = useMemo(() => ([...images].map(img => {
     return require(`../../../public/images/work/${img}.webp`);
   })), [images]);
 
-  const handleClick = () => {
-    setShowTitle(!showTitle);
-  };
+  const handleClick = () => onItemSelect(project);
 
-  const itemStyles = {
-    opacity: showTitle ? '1' : '0',
-  };
+  const isSelected = selecetdItem === project;
+
+  const itemStyles = { opacity: isSelected ? '1' : '0' };
 
   return (
     <div className="Project">
@@ -24,7 +21,7 @@ export const Project = ({ project}) => {
         <Fade
           arrows={false}
           canSwipe={false}
-          autoplay={!showTitle}
+          autoplay={!isSelected}
         >
           {urls.map(url => (
             <div

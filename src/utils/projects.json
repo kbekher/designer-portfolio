@@ -23,15 +23,15 @@
     {"name": "RVTC Rösterei Vier", "images": ["rvtc"] }
   ]},
   { "id": 4, "projects": [
-    {"name": "Fatboy the Original", "images": ["fatboy1", "fatboy2", "fatboy3"] },
-    {"name": "Accidentlly Wes Anderson", "images": ["awa1", "awa2", "awa3"] }
+    {"name": "Accidentlly Wes Anderson", "images": ["awa1", "awa2", "awa3"] },
+    {"name": "Fatboy the Original", "images": ["fatboy1", "fatboy2", "fatboy3"] }
   ]},
   { "id": 5, "projects": [
     {"name": "Media Development Foundation (Visual identity)", "images": ["mdf1", "mdf2", "mdf3", "mdf4"] }
   ]},
   { "id": 6, "projects": [
-    {"name": "Organic Chocolatte (Visual identity)", "images": ["organic1", "organic2", "organic3"] },
-    {"name": "Tropicfeel Go Beyond Travel", "images": ["tropicfeel"] }
+    {"name": "Tropicfeel Go Beyond Travel", "images": ["tropicfeel"] },
+    {"name": "Organic Chocolatte (Visual identity)", "images": ["organic1", "organic2", "organic3"] }
   ]},
   { "id": 7, "projects": [
     {"name": "Every Face Tells a Unique Story, Together We Write History", "images": ["faces"] }

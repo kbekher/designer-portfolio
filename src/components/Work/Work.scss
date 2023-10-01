@@ -76,13 +76,12 @@
   display: grid;
   grid-template-rows: repeat(10, 100%);
   grid-template-columns: 100%;
-  height: auto;
 }
 
 .row {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(2, 100%);
+  grid-template-rows: repeat(2, max-content);
 
   @include onTablet {
     grid-template-columns: repeat(2, 50%);

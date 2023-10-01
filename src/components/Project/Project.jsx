@@ -1,8 +1,8 @@
-import { useMemo} from 'react';
+import { useMemo } from 'react';
 import { Fade } from 'react-slideshow-image';
 import './Project.scss';
 
-export const Project = ({ project, selecetdItem, onItemSelect}) => {
+export const Project = ({ project, selecetdItem, onItemSelect }) => {
   const { name, images } = project;
 
   const urls = useMemo(() => ([...images].map(img => {
@@ -28,7 +28,7 @@ export const Project = ({ project, selecetdItem, onItemSelect}) => {
             <div
               key={url}
               className="Project__wrapper Project__wrapper--slide"
-              onClick={handleClick} 
+              onClick={handleClick}
             >
               <div className="Project__image-container">
                 <img
@@ -38,7 +38,7 @@ export const Project = ({ project, selecetdItem, onItemSelect}) => {
                 />
               </div>
 
-              <div 
+              <div
                 className="Project__content-container"
                 style={itemStyles}
               >
@@ -57,7 +57,7 @@ export const Project = ({ project, selecetdItem, onItemSelect}) => {
             />
           </div>
 
-          <div 
+          <div
             className="Project__content-container"
             style={itemStyles}
           >

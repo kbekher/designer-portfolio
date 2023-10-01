@@ -11,7 +11,8 @@
     {"name": "Star Porgis", "images": ["porgis"] },
     {"name": "Which Einstein are you today?", "images": ["einstein"] },
     {"name": "Divided Layers", "images": ["layers"] },
-    {"name": "Film Speed Lab", "images": ["fsl"] }
+    {"name": "Film Speed Lab", "images": ["fsl"] },
+    {"name": "Fragment Design", "images": ["fragment"] }
   ]},
   { "id": 3, "projects": [
     {"name": "Switzerland", "images": ["switzerland"] },

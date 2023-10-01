@@ -7,7 +7,6 @@ export const Project = ({ project}) => {
   const { name, images } = project;
 
   const urls = useMemo(() => ([...images].map(img => {
-    console.log('loop');
     return require(`../../../public/images/work/${img}.webp`);
   })), [images]);
 

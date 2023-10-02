@@ -105,10 +105,11 @@
   },
   {
     "name": "Kids",
-    "images": [
-      "kids1",
-      "kids2"
-    ]
+    "image": "kids1"
+  },
+  {
+    "name": "Emotions",
+    "image": "emotions"
   },
   {
     "name": "The Electric Bicycle Adventure",

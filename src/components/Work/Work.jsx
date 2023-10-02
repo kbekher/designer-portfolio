@@ -94,7 +94,14 @@ export const Work = () => {
 
         {/* Amster */}
         <div className="Work__section Work__section--full">
-          <div className="Work__project"></div>
+          <div className="Work__project">
+            <Project
+              name={projects[2].name}
+              image={projects[2].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
         </div>
 
         {/* Poster1 */}
@@ -111,7 +118,7 @@ export const Work = () => {
 
         {/* Awa-Fatboy */}
         <div className="Work__section Work__section--split">
-        <div className="Work__project Work__project--slider">
+          <div className="Work__project Work__project--slider">
             <Fade
               arrows={false}
               canSwipe={false}
@@ -190,7 +197,7 @@ export const Work = () => {
         {/* Tropicfeel-Organic */}
         <div className="Work__section Work__section--split">
           <div className="Work__project">
-          <Project
+            <Project
               name={projects[18].name}
               image={projects[18].image}
               selecetdItem={selecetdItem}
@@ -234,19 +241,47 @@ export const Work = () => {
 
         {/* Faces */}
         <div className="Work__section Work__section--full">
-          <div className="Work__project"></div>
+          <div className="Work__project">
+            <Project
+              name={projects[20].name}
+              image={projects[20].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
         </div>
 
         {/* Kids */}
-        <div className="Work__section Work__section--full">
-          <div className="Work__project"></div>
-          <div className="Work__project"></div>
+        <div className="Work__section Work__section--split">
+          <div className="Work__project">
+            <Project
+              name={projects[21].name}
+              image={projects[21].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
+          <div className="Work__project">
+            <Project
+              name={projects[22].name}
+              image={projects[22].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
         </div>
 
 
         {/* Bike */}
         <div className="Work__section Work__section--full">
-          <div className="Work__project"></div>
+          <div className="Work__project">
+          <Project
+              name={projects[23].name}
+              image={projects[23].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
         </div>
       </div>
     </div>

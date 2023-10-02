@@ -1,11 +1,7 @@
 import './Project.scss';
 
-export const Project = ({ name, image, selecetdItem, onItemSelect }) => {
+export const Project = ({ name, image, selecetdItem, onItemSelect }) => { 
   const url = require(`../../../public/images/work/${image}.webp`);
-
-  // const urls = useMemo(() => ([...images].map(img => {
-  //   return require(`../../../public/images/work/${img}.webp`);
-  // })), [images]);
 
   const handleClick = () => onItemSelect(name);
 

@@ -65,7 +65,7 @@ export const Work = () => {
               onItemSelect={handleItemClick}
             />
           </div>
-          <div className="Work__project Work__project--slider">
+          <div className="Work__project Work__project--slider Work__project--slider--first">
             <Fade
               arrows={false}
               canSwipe={false}
@@ -106,8 +106,80 @@ export const Work = () => {
 
         {/* Poster1 */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project">slider</div>
-          <div className="Work__project">slider</div>
+          <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={
+                !isSelected(projects[3].names[0])
+                || !isSelected(projects[3].names[1])
+                || !isSelected(projects[3].names[2])
+              }
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[3].names[0]}
+                  image={projects[3].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[3].names[1]}
+                  image={projects[3].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[3].names[2]}
+                  image={projects[3].images[2]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={
+                !isSelected(projects[4].names[0])
+                || !isSelected(projects[4].names[1])
+                || !isSelected(projects[4].names[2])
+              }
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[4].names[0]}
+                  image={projects[4].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[4].names[1]}
+                  image={projects[4].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[4].names[2]}
+                  image={projects[4].images[2]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            </Fade>
+          </div>
         </div>
 
         {/* Poster2 */}
@@ -123,28 +195,28 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[15].name)}
+              autoplay={!isSelected(projects[7].name)}
             >
               <div className="each-slide">
                 <Project
-                  name={projects[15].name}
-                  image={projects[15].images[0]}
+                  name={projects[7].name}
+                  image={projects[7].images[0]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               <div className="each-slide">
                 <Project
-                  name={projects[15].name}
-                  image={projects[15].images[1]}
+                  name={projects[7].name}
+                  image={projects[7].images[1]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               <div className="each-slide">
                 <Project
-                  name={projects[15].name}
-                  image={projects[15].images[2]}
+                  name={projects[7].name}
+                  image={projects[7].images[2]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
@@ -156,28 +228,28 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[16].name)}
+              autoplay={!isSelected(projects[8].name)}
             >
               <div className="each-slide">
                 <Project
-                  name={projects[16].name}
-                  image={projects[16].images[0]}
+                  name={projects[8].name}
+                  image={projects[8].images[0]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               <div className="each-slide">
                 <Project
-                  name={projects[16].name}
-                  image={projects[16].images[1]}
+                  name={projects[8].name}
+                  image={projects[8].images[1]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               <div className="each-slide">
                 <Project
-                  name={projects[16].name}
-                  image={projects[16].images[2]}
+                  name={projects[8].name}
+                  image={projects[8].images[2]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
@@ -198,39 +270,39 @@ export const Work = () => {
         <div className="Work__section Work__section--split">
           <div className="Work__project">
             <Project
-              name={projects[18].name}
-              image={projects[18].image}
+              name={projects[10].name}
+              image={projects[10].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
           </div>
-          <div className="Work__project Work__project--slider">
+          <div className="Work__project Work__project--slider Work__project--slider--last">
             <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[19].name)}
+              autoplay={!isSelected(projects[11].name)}
             >
               <div className="each-slide">
                 <Project
-                  name={projects[19].name}
-                  image={projects[19].images[0]}
+                  name={projects[11].name}
+                  image={projects[11].images[0]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               <div className="each-slide">
                 <Project
-                  name={projects[19].name}
-                  image={projects[19].images[1]}
+                  name={projects[11].name}
+                  image={projects[11].images[1]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
               {/* <div className="each-slide">
                 <Project
-                  name={projects[19].name}
-                  image={projects[19].images[2]}
+                  name={projects[12].name}
+                  image={projects[12].images[2]}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
@@ -243,8 +315,8 @@ export const Work = () => {
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
-              name={projects[20].name}
-              image={projects[20].image}
+              name={projects[12].name}
+              image={projects[12].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -255,16 +327,16 @@ export const Work = () => {
         <div className="Work__section Work__section--split">
           <div className="Work__project">
             <Project
-              name={projects[21].name}
-              image={projects[21].image}
+              name={projects[13].name}
+              image={projects[13].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
           </div>
           <div className="Work__project">
             <Project
-              name={projects[22].name}
-              image={projects[22].image}
+              name={projects[14].name}
+              image={projects[14].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -275,9 +347,9 @@ export const Work = () => {
         {/* Bike */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">
-          <Project
-              name={projects[23].name}
-              image={projects[23].image}
+            <Project
+              name={projects[15].name}
+              image={projects[15].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />

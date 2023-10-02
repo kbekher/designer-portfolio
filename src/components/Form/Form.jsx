@@ -9,26 +9,17 @@ const PUBLIC_KEY = 'J1VAP8MMyBRlLDJNs';
 
 export const Form = () => {
   const form = useRef(null);
-  // const [isSent, setIsSent] = useState(false);
+  const [isSent, setIsSent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState('');
-  // const [isEmailError, setIsEmailError] = useState(false);
 
   const handleInputChange = (e) => setEmail(e.target.value);
-
-  const isEmailValid = () => {
-    // Return true if the email is valid, otherwise return false
-    const emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
-    return emailRegex.test(email);
-  };
 
   const handleEnterKey = (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      if (email && isEmailValid()) {
+      if (email) {
         handleSubmit(e);
-      } else {
-        // setIsEmailError(true);
       }
     }
   };
@@ -36,7 +27,7 @@ export const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!email || !isEmailValid()) {
+    if (!email) {
       return;
     }
 
@@ -44,7 +35,7 @@ export const Form = () => {
       setIsSubmitting(true);
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
         .then(() => {
-          // setIsSent(true);
+          setIsSent(true);
           setIsSubmitting(false);
           setEmail('');
         })
@@ -53,34 +44,38 @@ export const Form = () => {
   };
 
   return (
-    <form
-      className="Form"
-      ref={form}   
-      onSubmit={handleSubmit} 
-    >
-      <input
-        type="text"
-        name="email"
-        className="Form__input"
-        value={email}
-        onChange={handleInputChange}
-        onKeyDown={(e) => handleEnterKey(e)}
-        placeholder="Type youre email..."
-
-      />
-      <button 
-        type="submit"
-        className="Form__button"
-        disabled={isSubmitting}
+    <div className="Form">
+      <form
+        className="Form__form"
+        ref={form}
+        onSubmit={handleSubmit}
       >
-        Subscribe
-      </button>
-{/* 
-      {isSent ? (
-              <p className="Contacts__form-message">
-                {formErrorMessage ? formErrorMessage : 'Thanks for your message!'}
-              </p>
-            ) : <p className="Contacts__form-message"> {' '} </p>} */}
-    </form>
+        <input
+          type="text"
+          name="email"
+          className="Form__input"
+          value={email}
+          onChange={handleInputChange}
+          onKeyDown={(e) => handleEnterKey(e)}
+          placeholder="Type youre email..."
+
+        />
+        <button
+          type="submit"
+          className="Form__button"
+          disabled={isSubmitting}
+        >
+          Subscribe
+        </button>
+      </form>
+
+
+      {isSent && (
+        <p className="Form__message">
+          Thank you for subscribing to the newsletter!
+        </p>
+      )}
+    </div>
+
   );
 };

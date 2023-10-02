@@ -1,9 +1,13 @@
 @import '../../styles/utils';
 
 .Form {
-  background-color: #D9D9D9;
-  border-radius: 50px;
-  display: flex;
+
+  &__form {
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    display: flex;
+  }
+
 
   &__input {
     font-size: 18px;
@@ -40,12 +44,15 @@
     background-color: $color-branding;
     color: $color-background;
 
-    &:hover {
-      
-    }
+    &:hover {}
 
     &:disabled {
       opacity: 0.9;
     }
+  }
+
+  &__message {
+    margin-top: 10px;
+    text-align: center;
   }
 }

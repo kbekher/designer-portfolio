@@ -79,7 +79,7 @@ export const About = () => {
         </div>
 
         <div className="About__section">
-          <h3 className="About__subtitle">Stay informed</h3>
+          <h3 className="About__subtitle">Don't miss out – subscribe now!</h3>
 
           <div className="About__form">
             <Form />

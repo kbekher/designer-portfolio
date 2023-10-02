@@ -13,7 +13,10 @@ export const Form = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [email, setEmail] = useState('');
 
-  const handleInputChange = (e) => setEmail(e.target.value);
+  const handleInputChange = (e) => {
+    setIsSent(false);
+    setEmail(e.target.value);
+  };
 
   const handleEnterKey = (e) => {
     if (e.key === 'Enter') {
@@ -36,7 +39,6 @@ export const Form = () => {
       emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
         .then(() => {
           setIsSent(true);
-          setIsSubmitting(false);
           setEmail('');
         })
         .finally(() => setIsSubmitting(false));
@@ -69,13 +71,13 @@ export const Form = () => {
         </button>
       </form>
 
-
-      {isSent && (
-        <p className="Form__message">
-          Thank you for subscribing to the newsletter!
-        </p>
-      )}
+      <div className="Form__message-container">
+        {isSent && (
+          <p className="Form__message">
+            Thank you for subscribing to the newsletter!
+          </p>
+        )}
+      </div>
     </div>
-
   );
 };

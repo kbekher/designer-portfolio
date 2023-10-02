@@ -12,7 +12,7 @@ import './App.scss';
 export const App = () => {
   const { isMenuOpen } = useContext(MenuContext);
 
-  useEffect(() => window.scrollTo({ top: 1, behavior: "smooth" }), []);
+  useEffect(() => window.scrollTo({ top: 0.5, behavior: "smooth" }), []);
 
   useEffect(() => {
     isMenuOpen

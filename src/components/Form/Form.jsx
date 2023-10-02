@@ -3,9 +3,9 @@ import emailjs from '@emailjs/browser';
 
 import './Form.scss';
 
-const SERVICE_ID = 'service_0lkajj1';
-const TEMPLATE_ID = 'template_fo83dwr';
-const PUBLIC_KEY = 'J1VAP8MMyBRlLDJNs';
+const SERVICE_ID = 'service_iuw48z2';
+const TEMPLATE_ID = 'template_07swser';
+const PUBLIC_KEY = 'kJTCx2ozKsGzfd9gs';
 
 export const Form = () => {
   const form = useRef(null);

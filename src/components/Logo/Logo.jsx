@@ -1,10 +1,18 @@
 import { useContext } from 'react';
-import { scrollTop } from '../../utils/functions';
-import './Logo.scss';
+import { animateScroll as scroll } from 'react-scroll';
 import { MenuContext } from '../../MenuContext';
+import './Logo.scss';
 
 export const Logo = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(MenuContext);
+
+  const scrollTop = () => {
+    scroll.scrollToTop({
+      duration: 250,
+      delay: 0,
+      smooth: true,
+    });
+  }
 
   const handleClick = () => {
     if (!isMenuOpen) {

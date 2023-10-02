@@ -1,6 +1,4 @@
 import { useContext, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { scrollTop } from './utils/functions';
 import { MenuContext } from './MenuContext';
 import { Header } from './components/Header';
 import { Menu } from './components/Menu';
@@ -12,11 +10,7 @@ import { Footer } from './components/Footer';
 import './App.scss';
 
 export const App = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    scrollTop();
-  }, [location.pathname]);
+  useEffect(() => window.scrollTo({ top: 1, behavior: "smooth" }), []);
 
   const { isMenuOpen } = useContext(MenuContext);
 

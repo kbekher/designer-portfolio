@@ -1,15 +1,42 @@
+import { useEffect, useState } from 'react';
+import { Fade } from 'react-slideshow-image';
+import projects from '../../utils/projects.json';
+import { Project } from '../Project/Project';
 import './Work.scss';
 
 export const Work = () => {
-  // const [selecetdItem, setSelectedItem] = useState(null);
+  useEffect(() => {
+    window.addEventListener('error', e => {
+      if (e.message === 'ResizeObserver loop limit exceeded') {
+        const resizeObserverErrDiv = document.getElementById(
+          'webpack-dev-server-client-overlay-div'
+        );
+        const resizeObserverErr = document.getElementById(
+          'webpack-dev-server-client-overlay'
+        );
+        if (resizeObserverErr) {
+          resizeObserverErr.setAttribute('style', 'display: none');
+        }
+        if (resizeObserverErrDiv) {
+          resizeObserverErrDiv.setAttribute('style', 'display: none');
+        }
+      }
+    });
+  }, []);
 
-  // const handleItemClick = (item) => {
-  //   if (selecetdItem === item) {
-  //     setSelectedItem(null); // Deselect if already selected
-  //   } else {
-  //     setSelectedItem(item); // Otherwise, select the child item
-  //   }
-  // }
+  const [selecetdItem, setSelectedItem] = useState('');
+
+  const handleItemClick = (item) => {
+    if (selecetdItem === item) {
+      setSelectedItem(''); // Deselect if already selected
+    } else {
+      setSelectedItem(item); // Otherwise, select the child item
+    }
+  }
+
+  const isSelected = (name) => {
+    return selecetdItem === name;
+  };
 
   return (
     <div className="Work" id="work">
@@ -30,13 +57,44 @@ export const Work = () => {
       <div className="Work__projects">
         {/* Simmons-Lasso */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project"></div>
-          <div className="Work__project">slider</div>
+          <div className="Work__project">
+            <Project
+              name={projects[0].name}
+              image={projects[0].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
+          <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(projects[1].name)}
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[1].name}
+                  image={projects[1].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[1].name}
+                  image={projects[1].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            </Fade>
+          </div>
         </div>
 
         {/* Amster */}
         <div className="Work__section Work__section--full">
-        <div className="Work__project"></div>
+          <div className="Work__project"></div>
         </div>
 
         {/* Poster1 */}
@@ -53,39 +111,142 @@ export const Work = () => {
 
         {/* Awa-Fatboy */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project">slider</div>
-          <div className="Work__project">slider</div>
+        <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(projects[15].name)}
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[15].name}
+                  image={projects[15].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[15].name}
+                  image={projects[15].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[15].name}
+                  image={projects[15].images[2]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            </Fade>
+          </div>
+          <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(projects[16].name)}
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[16].name}
+                  image={projects[16].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[16].name}
+                  image={projects[16].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[16].name}
+                  image={projects[16].images[2]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+            </Fade>
+          </div>
         </div>
 
         {/* MDF */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">slider-mobile</div>
-          
+
           <div className="Work__project">slider</div>
           <div className="Work__project">slider</div>
         </div>
 
         {/* Tropicfeel-Organic */}
         <div className="Work__section Work__section--split">
+          <div className="Work__project">
+          <Project
+              name={projects[18].name}
+              image={projects[18].image}
+              selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+          </div>
+          <div className="Work__project Work__project--slider">
+            <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(projects[19].name)}
+            >
+              <div className="each-slide">
+                <Project
+                  name={projects[19].name}
+                  image={projects[19].images[0]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              <div className="each-slide">
+                <Project
+                  name={projects[19].name}
+                  image={projects[19].images[1]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div>
+              {/* <div className="each-slide">
+                <Project
+                  name={projects[19].name}
+                  image={projects[19].images[2]}
+                  selecetdItem={selecetdItem}
+                  onItemSelect={handleItemClick}
+                />
+              </div> */}
+            </Fade>
+          </div>
+        </div>
+
+        {/* Faces */}
+        <div className="Work__section Work__section--full">
           <div className="Work__project"></div>
-          <div className="Work__project">slider</div>
         </div>
 
-         {/* Faces */}
-         <div className="Work__section Work__section--full">
-         <div className="Work__project"></div>
-        </div>
-
-         {/* Kids */}
-         <div className="Work__section Work__section--full">
-         <div className="Work__project"></div>
-         <div className="Work__project"></div>
+        {/* Kids */}
+        <div className="Work__section Work__section--full">
+          <div className="Work__project"></div>
+          <div className="Work__project"></div>
         </div>
 
 
-         {/* Bike */}
-         <div className="Work__section Work__section--full">
-         <div className="Work__project"></div>
+        {/* Bike */}
+        <div className="Work__section Work__section--full">
+          <div className="Work__project"></div>
         </div>
       </div>
     </div>

@@ -1,9 +1,7 @@
 [
   {
     "name": "Daniel Simmons",
-    "images": [
-      "simmons"
-    ]
+    "image": "simmons"
   },
   {
     "name": "Lasso Way",
@@ -14,81 +12,55 @@
   },
   {
     "name": "Amsterdam's Enchanting Facades",
-    "images": [
-      "amster"
-    ]
+    "image":"amster"
   },
   {
     "name": "Divchata Agency",
-    "images": [
-      "divchata"
-    ]
+    "image": "divchata"
   },
   {
     "name": "Star Porgis",
-    "images": [
-      "porgis"
-    ]
+    "image":"porgis"
   },
   {
     "name": "Which Einstein are you today?",
-    "images": [
-      "einstein"
-    ]
+    "image": "einstein"
   },
   {
     "name": "Divided Layers",
-    "images": [
-      "layers"
-    ]
+    "image": "layers"
   },
   {
     "name": "Film Speed Lab",
-    "images": [
-      "fsl"
-    ]
+    "image":"fsl"
   },
   {
     "name": "Fragment Design",
-    "images": [
-      "fragment"
-    ]
+    "images": "fragment"
   },
   {
     "name": "Switzerland",
-    "images": [
-      "switzerland"
-    ]
+    "image":"switzerland"
   },
   {
     "name": "Black and White spots",
-    "images": [
-      "spots"
-    ]
+    "image": "spots"
   },
   {
     "name": "Each day's potential",
-    "images": [
-      "potential"
-    ]
+    "image": "potential"
   },
   {
     "name": "b-n Studio",
-    "images": [
-      "icy"
-    ]
+    "image":"icy"
   },
   {
     "name": "poster",
-    "images": [
-      "poster"
-    ]
+    "image": "poster"
   },
   {
     "name": "RVTC Rösterei Vier",
-    "images": [
-      "rvtc"
-    ]
+    "image": "rvtc"
   },
   {
     "name": "Accidentlly Wes Anderson",
@@ -117,9 +89,7 @@
   },
   {
     "name": "Tropicfeel Go Beyond Travel",
-    "images": [
-      "tropicfeel"
-    ]
+    "image": "tropicfeel"
   },
   {
     "name": "Organic Chocolatte (Visual identity)",
@@ -131,9 +101,7 @@
   },
   {
     "name": "Every Face Tells a Unique Story, Together We Write History",
-    "images": [
-      "faces"
-    ]
+    "image": "faces"
   },
   {
     "name": "Kids",
@@ -144,8 +112,6 @@
   },
   {
     "name": "The Electric Bicycle Adventure",
-    "images": [
-      "bike"
-    ]
+    "image": "bike"
   }
 ]

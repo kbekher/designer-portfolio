@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { animateScroll as scroll } from 'react-scroll';
+import { scrollTop } from '../../utils/functions';
 import './Logo.scss';
 import { MenuContext } from '../../MenuContext';
 
@@ -8,20 +8,12 @@ export const Logo = () => {
 
   const handleClick = () => {
     if (!isMenuOpen) {
-      scroll.scrollToTop({
-        duration: 250,
-        delay: 0,
-        smooth: true,
-      });
+      scrollTop();
       return;
     }
 
     setIsMenuOpen(false)
-    scroll.scrollToTop({
-      duration: 250,
-      delay: 0,
-      smooth: true,
-    });
+    scrollTop();
   }
 
   return (

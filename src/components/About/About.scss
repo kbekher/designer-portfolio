@@ -62,6 +62,15 @@
         text-decoration: underline;
       }
     }
+
+    &--subscribe {
+      font-size: 20px;
+      text-align: center;
+
+      @include onTablet {
+        font-size: 28px;
+      }
+    }
   }
 
   &__img-container {

@@ -10,9 +10,9 @@ import { Footer } from './components/Footer';
 import './App.scss';
 
 export const App = () => {
-  useEffect(() => window.scrollTo({ top: 1, behavior: "smooth" }), []);
-
   const { isMenuOpen } = useContext(MenuContext);
+
+  useEffect(() => window.scrollTo({ top: 1, behavior: "smooth" }), []);
 
   useEffect(() => {
     isMenuOpen

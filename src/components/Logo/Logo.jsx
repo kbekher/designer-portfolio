@@ -32,7 +32,7 @@ export const Logo = () => {
     >
       <img
         className="Logo__image"
-        src="./images/logo.webp"
+        src="./images/logo.svg"
         alt="logo"
       />
     </button>

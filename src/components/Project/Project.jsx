@@ -5,6 +5,7 @@ import './Project.scss';
 export const Project = ({
   name,
   image,
+  subtitle,
   selecetdItem,
   onItemSelect,
 }) => {
@@ -24,7 +25,10 @@ export const Project = ({
         <img src={url} alt={name} className="Project__image" />
 
         <div className="Project__content-container" style={itemStyles}>
-          <h3 className="Project__title">{name}</h3>
+          <h3 className="Project__title">
+            {name}
+          </h3>
+          {subtitle && <span className="Project__subtitle">{subtitle}</span>}
         </div>
       </div>
     </div>

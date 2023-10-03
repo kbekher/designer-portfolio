@@ -52,7 +52,7 @@ export const projects = [{
   imageId: "icy"
 }, {
   id: 13,
-  name: "Abstract layers",
+  name: "Abstract Layers",
   imageId: "poster"
 }, {
   id: 14,
@@ -65,15 +65,18 @@ export const projects = [{
 }, 
 {
   id: 16,
-  name: "Tropicfeel Go Beyond Travel",
+  name: "Tropicfeel",
+  subtitle: "Go Beyond Travel",
   imageId: "tropicfeel"
 }, {
   id: 17,
-  name: "Media Development Foundation (Visual identity)",
+  name: "Media Development Foundation",
+  subtitle: "(Visual identity)",
   imageIds: [ "mdf1", "mdf2", "mdf3", "mdf4" ]
 }, {
   id: 18,
-  name: "Organic Chocolatte (Visual identity)",
+  name: "Organic Chocolatte",
+  subtitle: "(Visual identity)",
   imageIds: [ "organic1", "organic2" ]
 }, {
   id: 19,

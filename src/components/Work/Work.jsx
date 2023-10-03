@@ -25,10 +25,10 @@ export const Work = () => {
     });
   }, []);
 
-  const posters1 = projects.slice(3, 6);
-  const posters2 = projects.slice(6, 9);
-  const posters3 = projects.slice(9, 12);
-  const posters4 = projects.slice(12, 15);
+  // const posters1 = projects.slice(3, 6);
+  // const posters2 = projects.slice(6, 9);
+  // const posters3 = projects.slice(9, 12);
+  // const posters4 = projects.slice(12, 15);
 
   const [selecetdItem, setSelectedItem] = useState('');
 
@@ -83,7 +83,7 @@ export const Work = () => {
               {projects[1].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[1].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -108,7 +108,7 @@ export const Work = () => {
         </div>
 
         {/* Poster1 */}
-        <div className="Work__section Work__section--split">
+        {/* <div className="Work__section Work__section--split">
           <div className="Work__project Work__project--slider Work__project--slider--poster">
             <Fade
               arrows={false}
@@ -157,10 +157,10 @@ export const Work = () => {
               ))}
             </Fade>
           </div>
-        </div>
+        </div> */}
 
         {/* Poster2 */}
-        <div className="Work__section Work__section--split">
+        {/* <div className="Work__section Work__section--split">
           <div className="Work__project Work__project--slider Work__project--slider--poster">
             <Fade
               arrows={false}
@@ -209,7 +209,7 @@ export const Work = () => {
               ))}
             </Fade>
           </div>
-        </div>
+        </div> */}
 
         {/* Awa-Tropicfeel */}
         <div className="Work__section Work__section--split">
@@ -224,7 +224,7 @@ export const Work = () => {
               {projects[15].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[15].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -238,6 +238,7 @@ export const Work = () => {
             <Project
               name={projects[16].name}
               image={projects[16].imageId}
+              subtitle={projects[16].subtitle}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -257,9 +258,10 @@ export const Work = () => {
               {projects[17].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[17].name}
                     image={img}
+                    subtitle={projects[17].subtitle}
                     selecetdItem={selecetdItem}
                     onItemSelect={handleItemClick}
                   />
@@ -277,8 +279,9 @@ export const Work = () => {
               {projects[18].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[18].name}
+                    subtitle={projects[18].subtitle}
                     image={img}
                     selecetdItem={selecetdItem}
                     onItemSelect={handleItemClick}
@@ -302,7 +305,7 @@ export const Work = () => {
               {projects[19].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[19].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -323,7 +326,7 @@ export const Work = () => {
               {projects[20].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
+                    // key={img}
                     name={projects[20].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -352,7 +355,7 @@ export const Work = () => {
           {projects.slice(22, 24).map(item => (
             <div className="Work__project" key={item.img}>
               <Project
-                key={item.img}
+                // key={item.img}
                 name={item.name}
                 image={item.imageId}
                 selecetdItem={selecetdItem}

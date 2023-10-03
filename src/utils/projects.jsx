@@ -104,45 +104,25 @@ export const projects = [{
   imageId: "bike"
 }];
 
-// const getPosterName = (img) => {
-//   switch (img) {
-//     case "divchata":
-//       return "Divchata Agency";
-
-//     case "porgis":
-//       return "Star Porgis";
-
-//     case "einstein":
-//       return "Which Einstein are you today?";
-
-//     case "fsl":
-//       return "Film Speed Lab";
-
-//     case "layers":
-//       return "Divided Layers";
-
-//     case "fragment":
-//       return "Fragment Design";
-
-//     case "switzerland":
-//       return "Switzerland";
-
-//     case "spots":
-//       return "Black and White spots";
-
-//     case "potential":
-//       return "Each day's potential";
-
-//     case "icy":
-//       return "b-n Studio";
-
-//     case "poster":
-//       return "Abstract Layers";
-
-//     case "rvtc":
-//       return "RVTC Rösterei Vier";
-
-//     default:
-//       return;
-//   }
-// };
+// export const posters =  [
+//   {
+//   id: 0,
+//   names: ["Divchata Agency", "Star Porgis", "Which Einstein are you today?"],
+//   imageIds: [ "divchata", "porgis", "einstein" ]
+// },
+//   {
+//   id: 1,
+//   names: ["Film Speed Lab", "Divided Layers", "Fragment Design"],
+//   imageIds: [ "fsl", "layers", "fragment" ]
+// },
+//   {
+//   id: 2,
+//   names: ["Switzerland", "Black and White spots", "Each day's potential"],
+//   imageIds: [ "switzerland", "spots", "potential" ]
+// },
+//   {
+//   id: 3,
+//   names: ["b-n Studio", "Abstract Layers", "RVTC Rösterei Vier"],
+//   imageIds: [ "icy", "poster", "rvtc" ]
+// },
+// ];

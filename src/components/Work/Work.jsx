@@ -1,16 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-slideshow-image';
-import { projects} from "../../utils/projects";
+import { projects } from "../../utils/projects";
 import { Project } from '../Project';
 import './Work.scss';
-
-
-const posters = projects.slice(3, 15);
-const posterImages = [];
-
-for (const poster of posters) {
-  posterImages.push(poster.imageId);
-}
 
 export const Work = () => {
   useEffect(() => {
@@ -30,7 +22,7 @@ export const Work = () => {
         }
       }
     });
-  }, []);
+  }, []); 
 
   const [selecetdItem, setSelectedItem] = useState('');
 
@@ -85,7 +77,6 @@ export const Work = () => {
               {projects[1].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    // key={img}
                     name={projects[1].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -116,23 +107,23 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected("Divchata Agency")
-                || !isSelected("Star Porgis")
-                || !isSelected("Which Einstein are you today?")
+              autoplay={!isSelected(posters[0].names[0])
+                && !isSelected(posters[0].names[1])
+                && !isSelected(posters[0].names[2])
               }
-              duration={4000}
             >
-              {posters1.map(img => (
+              {posters[0].imageIds.map((img, i) =>{
+                return  (
                   <div className="each-slide" key={img}>
                     <Project
-                      // key={poster.imageId}
-                      name={getPosterName(img)}
+                      name={posters[0].names[i]}
                       image={img}
                       selecetdItem={selecetdItem}
                       onItemSelect={handleItemClick}
                     />
                   </div>
-                ))}
+                );
+              })}
             </Fade>
           </div>
           <div className="Work__project Work__project--slider">
@@ -140,17 +131,15 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected("Film Speed Lab")
-                || !isSelected("Divided Layers")
-                || !isSelected("Fragment Design")
+              autoplay={!isSelected(posters[1].names[0])
+                && !isSelected(posters[1].names[1])
+                && !isSelected(posters[1].names[2])
               }
-              duration={4500}
             >
-              {posters2.map(img => (
+              {posters[1].imageIds.map((img, i) => (
                 <div className="each-slide" key={img}>
                   <Project
-                    key={img}
-                    name={getPosterName(img)}
+                    name={posters[1].names[i]}
                     image={img}
                     selecetdItem={selecetdItem}
                     onItemSelect={handleItemClick}
@@ -177,7 +166,6 @@ export const Work = () => {
               {posters3.map(poster => (
                 <div className="each-slide" key={poster.imageId}>
                   <Project
-                    key={poster.imageId}
                     name={poster.name}
                     image={poster.imageId}
                     selecetdItem={selecetdItem}
@@ -201,7 +189,6 @@ export const Work = () => {
               {posters4.map(poster => (
                 <div className="each-slide" key={poster.imageId}>
                   <Project
-                    key={poster.imageId}
                     name={poster.name}
                     image={poster.imageId}
                     selecetdItem={selecetdItem}
@@ -226,7 +213,6 @@ export const Work = () => {
               {projects[15].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    // key={img}
                     name={projects[15].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -260,7 +246,6 @@ export const Work = () => {
               {projects[17].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    // key={img}
                     name={projects[17].name}
                     image={img}
                     subtitle={projects[17].subtitle}
@@ -281,7 +266,6 @@ export const Work = () => {
               {projects[18].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    // key={img}
                     name={projects[18].name}
                     subtitle={projects[18].subtitle}
                     image={img}
@@ -307,7 +291,6 @@ export const Work = () => {
               {projects[19].imageIds.map(img => (
                 <div className="each-slide" key={img}>
                   <Project
-                    // key={img}
                     name={projects[19].name}
                     image={img}
                     selecetdItem={selecetdItem}
@@ -357,7 +340,6 @@ export const Work = () => {
           {projects.slice(22, 24).map(item => (
             <div className="Work__project" key={item.id}>
               <Project
-                // key={item.img}
                 name={item.name}
                 image={item.imageId}
                 selecetdItem={selecetdItem}

@@ -83,13 +83,14 @@ export const Work = () => {
             >
               {projects[1].images.map(img => (
                 <div className="each-slide" key={img}>
-                <Project
-                  name={projects[1].name}
-                  image={img}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+                  <Project
+                    key={img}
+                    name={projects[1].name}
+                    image={img}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
               ))}
             </Fade>
           </div>
@@ -118,6 +119,7 @@ export const Work = () => {
                 || !isSelected(posters1[0].name)
                 || !isSelected(posters1[0].name)
               }
+              duration={4000}
             >
               {posters1.map(poster => (
                 <div className="each-slide" key={poster.name}>
@@ -133,7 +135,7 @@ export const Work = () => {
             </Fade>
           </div>
           <div className="Work__project Work__project--slider Work__project--slider--poster">
-          <Fade
+            <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
@@ -160,7 +162,7 @@ export const Work = () => {
         {/* Poster2 */}
         <div className="Work__section Work__section--split">
           <div className="Work__project Work__project--slider Work__project--slider--poster">
-          <Fade
+            <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
@@ -183,7 +185,7 @@ export const Work = () => {
             </Fade>
           </div>
           <div className="Work__project Work__project--slider Work__project--slider--poster">
-          <Fade
+            <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
@@ -191,6 +193,7 @@ export const Work = () => {
                 || !isSelected(posters4[0].name)
                 || !isSelected(posters4[0].name)
               }
+              duration={4000}
             >
               {posters4.map(poster => (
                 <div className="each-slide" key={poster.name}>
@@ -215,16 +218,18 @@ export const Work = () => {
               canSwipe={false}
               pauseOnHover={false}
               autoplay={!isSelected(projects[15].name)}
+              duration={4500}
             >
               {projects[15].images.map(img => (
                 <div className="each-slide" key={img}>
-                <Project
-                  name={projects[15].name}
-                  image={img}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+                  <Project
+                    key={img}
+                    name={projects[15].name}
+                    image={img}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
               ))}
             </Fade>
           </div>
@@ -237,13 +242,14 @@ export const Work = () => {
             >
               {projects[16].images.map(img => (
                 <div className="each-slide" key={img}>
-                <Project
-                  name={projects[16].name}
-                  image={img}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+                  <Project
+                    key={img}
+                    name={projects[16].name}
+                    image={img}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
               ))}
             </Fade>
           </div>
@@ -251,8 +257,6 @@ export const Work = () => {
 
         {/* MDF */}
         <div className="Work__section Work__section--full">
-          <div className="Work__project">slider-mobile</div>
-
           <div className="Work__project">slider</div>
           <div className="Work__project">slider</div>
         </div>
@@ -276,13 +280,14 @@ export const Work = () => {
             >
               {projects[19].images.map(img => (
                 <div className="each-slide" key={img}>
-                <Project
-                  name={projects[19].name}
-                  image={img}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+                  <Project
+                    key={img}
+                    name={projects[19].name}
+                    image={img}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
               ))}
             </Fade>
           </div>
@@ -304,13 +309,14 @@ export const Work = () => {
         <div className="Work__section Work__section--split">
           {projects.slice(21, 23).map(item => (
             <div className="Work__project" key={item.name}>
-            <Project
-              name={item.name}
-              image={item.image}
-              selecetdItem={selecetdItem}
-              onItemSelect={handleItemClick}
-            />
-          </div>
+              <Project
+                key={item.name}
+                name={item.name}
+                image={item.image}
+                selecetdItem={selecetdItem}
+                onItemSelect={handleItemClick}
+              />
+            </div>
           ))}
         </div>
 

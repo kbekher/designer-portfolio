@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react';
 import { Fade } from 'react-slideshow-image';
 import projects from '../../utils/projects.json';
 import { Project } from '../Project/Project';
+import { Slider } from './Slider';
 import './Work.scss';
+
 
 export const Work = () => {
   useEffect(() => {
@@ -24,15 +26,23 @@ export const Work = () => {
     });
   }, []);
 
+  const posters = projects.slice(3, 15);
+  const posters1 = posters.splice(0, 3);
+  const posters2 = posters.splice(0, 3);
+  const posters3 = posters.splice(0, 3);
+  const posters4 = posters;
+
   const [selecetdItem, setSelectedItem] = useState('');
 
   const handleItemClick = (item) => {
-    if (selecetdItem === item) {
-      setSelectedItem(''); // Deselect if already selected
-    } else {
-      setSelectedItem(item); // Otherwise, select the child item
-    }
-  }
+    setSelectedItem(prevSelectedImage => {
+      if (prevSelectedImage === item) {
+        return '';
+      } else {
+        return item;
+      }
+    });
+  };
 
   const isSelected = (name) => {
     return selecetdItem === name;
@@ -72,22 +82,16 @@ export const Work = () => {
               pauseOnHover={false}
               autoplay={!isSelected(projects[1].name)}
             >
-              <div className="each-slide">
+              {projects[1].images.map(img => (
+                <div className="each-slide" key={img}>
                 <Project
                   name={projects[1].name}
-                  image={projects[1].images[0]}
+                  image={img}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[1].name}
-                  image={projects[1].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              ))}
             </Fade>
           </div>
         </div>
@@ -106,86 +110,102 @@ export const Work = () => {
 
         {/* Poster1 */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project Work__project--slider">
+          <div className="Work__project Work__project--slider Work__project--slider--poster">
             <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={
-                !isSelected(projects[3].names[0])
-                || !isSelected(projects[3].names[1])
-                || !isSelected(projects[3].names[2])
+              autoplay={!isSelected(posters1[0].name)
+                || !isSelected(posters1[0].name)
+                || !isSelected(posters1[0].name)
               }
             >
-              <div className="each-slide">
-                <Project
-                  name={projects[3].names[0]}
-                  image={projects[3].images[0]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[3].names[1]}
-                  image={projects[3].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[3].names[2]}
-                  image={projects[3].images[2]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              {posters1.map(poster => (
+                <div className="each-slide" key={poster.name}>
+                  <Project
+                    key={poster.name}
+                    name={poster.name}
+                    image={poster.image}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
+              ))}
             </Fade>
           </div>
-          <div className="Work__project Work__project--slider">
-            <Fade
+          <div className="Work__project Work__project--slider Work__project--slider--poster">
+          <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={
-                !isSelected(projects[4].names[0])
-                || !isSelected(projects[4].names[1])
-                || !isSelected(projects[4].names[2])
+              autoplay={!isSelected(posters2[0].name)
+                || !isSelected(posters2[0].name)
+                || !isSelected(posters2[0].name)
               }
             >
-              <div className="each-slide">
-                <Project
-                  name={projects[4].names[0]}
-                  image={projects[4].images[0]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[4].names[1]}
-                  image={projects[4].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[4].names[2]}
-                  image={projects[4].images[2]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              {posters2.map(poster => (
+                <div className="each-slide" key={poster.name}>
+                  <Project
+                    key={poster.name}
+                    name={poster.name}
+                    image={poster.image}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
+              ))}
             </Fade>
           </div>
         </div>
 
         {/* Poster2 */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project">slider</div>
-          <div className="Work__project">slider</div>
+          <div className="Work__project Work__project--slider Work__project--slider--poster">
+          <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(posters3[0].name)
+                || !isSelected(posters3[0].name)
+                || !isSelected(posters3[0].name)
+              }
+            >
+              {posters3.map(poster => (
+                <div className="each-slide" key={poster.name}>
+                  <Project
+                    key={poster.name}
+                    name={poster.name}
+                    image={poster.image}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
+              ))}
+            </Fade>
+          </div>
+          <div className="Work__project Work__project--slider Work__project--slider--poster">
+          <Fade
+              arrows={false}
+              canSwipe={false}
+              pauseOnHover={false}
+              autoplay={!isSelected(posters4[0].name)
+                || !isSelected(posters4[0].name)
+                || !isSelected(posters4[0].name)
+              }
+            >
+              {posters4.map(poster => (
+                <div className="each-slide" key={poster.name}>
+                  <Project
+                    key={poster.name}
+                    name={poster.name}
+                    image={poster.image}
+                    selecetdItem={selecetdItem}
+                    onItemSelect={handleItemClick}
+                  />
+                </div>
+              ))}
+            </Fade>
+          </div>
         </div>
 
         {/* Awa-Fatboy */}
@@ -195,32 +215,18 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[7].name)}
+              autoplay={!isSelected(projects[15].name)}
             >
-              <div className="each-slide">
+              {projects[15].images.map(img => (
+                <div className="each-slide" key={img}>
                 <Project
-                  name={projects[7].name}
-                  image={projects[7].images[0]}
+                  name={projects[15].name}
+                  image={img}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[7].name}
-                  image={projects[7].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[7].name}
-                  image={projects[7].images[2]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              ))}
             </Fade>
           </div>
           <div className="Work__project Work__project--slider">
@@ -228,32 +234,18 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[8].name)}
+              autoplay={!isSelected(projects[16].name)}
             >
-              <div className="each-slide">
+              {projects[16].images.map(img => (
+                <div className="each-slide" key={img}>
                 <Project
-                  name={projects[8].name}
-                  image={projects[8].images[0]}
+                  name={projects[16].name}
+                  image={img}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[8].name}
-                  image={projects[8].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[8].name}
-                  image={projects[8].images[2]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              ))}
             </Fade>
           </div>
         </div>
@@ -270,8 +262,8 @@ export const Work = () => {
         <div className="Work__section Work__section--split">
           <div className="Work__project">
             <Project
-              name={projects[10].name}
-              image={projects[10].image}
+              name={projects[18].name}
+              image={projects[18].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -281,24 +273,18 @@ export const Work = () => {
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(projects[11].name)}
+              autoplay={!isSelected(projects[19].name)}
             >
-              <div className="each-slide">
+              {projects[19].images.map(img => (
+                <div className="each-slide" key={img}>
                 <Project
-                  name={projects[11].name}
-                  image={projects[11].images[0]}
+                  name={projects[19].name}
+                  image={img}
                   selecetdItem={selecetdItem}
                   onItemSelect={handleItemClick}
                 />
               </div>
-              <div className="each-slide">
-                <Project
-                  name={projects[11].name}
-                  image={projects[11].images[1]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div>
+              ))}
             </Fade>
           </div>
         </div>
@@ -307,8 +293,8 @@ export const Work = () => {
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
-              name={projects[12].name}
-              image={projects[12].image}
+              name={projects[20].name}
+              image={projects[20].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -317,22 +303,16 @@ export const Work = () => {
 
         {/* Kids */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project">
+          {projects.slice(21, 23).map(item => (
+            <div className="Work__project" key={item.name}>
             <Project
-              name={projects[13].name}
-              image={projects[13].image}
+              name={item.name}
+              image={item.image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
           </div>
-          <div className="Work__project">
-            <Project
-              name={projects[14].name}
-              image={projects[14].image}
-              selecetdItem={selecetdItem}
-              onItemSelect={handleItemClick}
-            />
-          </div>
+          ))}
         </div>
 
 
@@ -340,8 +320,8 @@ export const Work = () => {
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
-              name={projects[15].name}
-              image={projects[15].image}
+              name={projects[23].name}
+              image={projects[23].image}
               selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />

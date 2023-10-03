@@ -84,12 +84,17 @@
       margin-bottom: 100%;
 
       &--first,
-      &--last {
+      &--last{
         @include onTablet {
           margin-bottom: 0;
         }
       }
 
+      &--poster {
+        @include onTablet {
+          margin-bottom: 50%;
+        }
+      }
     }
   }
 }

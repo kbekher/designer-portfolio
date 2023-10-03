@@ -1,6 +1,12 @@
+import React from 'react';
 import './Project.scss';
 
-export const Project = ({ name, image, selecetdItem, onItemSelect }) => { 
+export const Project = ({ 
+    name, 
+    image, 
+    selecetdItem, 
+    onItemSelect,
+  }) => { 
   const url = require(`../../../public/images/work/${image}.webp`);
 
   const handleClick = () => onItemSelect(name);

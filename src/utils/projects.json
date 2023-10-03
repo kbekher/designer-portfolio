@@ -15,52 +15,52 @@
     "image": "amster"
   },
   {
-    "names": [
-      "Divchata Agency",
-      "Star Porgis",
-      "Which Einstein are you today?"
-    ],
-    "images": [
-      "divchata",
-      "porgis",
-      "einstein"
-    ]
+    "name": "Divchata Agency",
+    "image": "divchata"
   },
   {
-    "names": [
-      "Divided Layers",
-      "Film Speed Lab",
-      "Fragment Design"
-    ],
-    "images": [
-      "layers",
-      "fsl",
-      "fragment"
-    ]
+    "name": "Star Porgis",
+    "image": "porgis"
   },
   {
-    "names": [
-      "Switzerland",
-      "Black and White spots",
-      "Each day's potential"
-    ],
-    "images": [
-      "switzerland",
-      "spots",
-      "potential"
-    ]
+    "name": "Which Einstein are you today?",
+    "image": "einstein"
   },
   {
-    "names": [
-      "b-n Studio",
-      "poster",
-      "RVTC Rösterei Vier"
-    ],
-    "images": [
-      "icy",
-      "poster",
-      "rvtc"
-    ]
+    "name": "Film Speed Lab",
+    "image": "fsl"
+  },
+  {
+    "name": "Divided Layers",
+    "image": "layers"
+  },
+  {
+    "name": "Fragment Design",
+    "image": "fragment"
+  },
+  {
+    "name": "Switzerland",
+    "image": "switzerland"
+  },
+  {
+    "name": "Black and White spots",
+    "image": "spots"
+  },
+  {
+    "name": "Each day's potential",
+    "image": "potential"
+  },
+  {
+    "name": "b-n Studio",
+    "image": "icy"
+  },
+  {
+    "name": "Abstract layers",
+    "image": "poster"
+  },
+  {
+    "name": "RVTC Rösterei Vier",
+    "image": "rvtc"
   },
   {
     "name": "Accidentlly Wes Anderson",

@@ -62,36 +62,41 @@ export const projects = [{
   id: 15,
   name: "Accidentlly Wes Anderson",
   imageIds: [ "awa1", "awa2", "awa3" ]
-}, {
+}, 
+{
   id: 16,
-  name: "Fatboy the Original",
-  imageIds: [ "fatboy1", "fatboy2", "fatboy3" ]
+  name: "Tropicfeel Go Beyond Travel",
+  imageId: "tropicfeel"
 }, {
   id: 17,
   name: "Media Development Foundation (Visual identity)",
   imageIds: [ "mdf1", "mdf2", "mdf3", "mdf4" ]
 }, {
   id: 18,
-  name: "Tropicfeel Go Beyond Travel",
-  imageId: "tropicfeel"
-}, {
-  id: 19,
   name: "Organic Chocolatte (Visual identity)",
   imageIds: [ "organic1", "organic2" ]
 }, {
+  id: 19,
+  name: "Aimé Leon Dore",
+  imageIds: [ "leon1", "leon2", "leon3" ]
+},{
   id: 20,
+  name: "Fatboy the Original",
+  imageIds: [ "fatboy1", "fatboy2", "fatboy3" ]
+},  {
+  id: 21,
   name: "Every Face Tells a Unique Story, Together We Write History",
   imageId: "faces"
 }, {
-  id: 21,
+  id: 22,
   name: "Kids",
   imageId: "kids1"
 }, {
-  id: 22,
+  id: 23,
   name: "Emotions",
   imageId:  "emotions"
 }, {
-  id: 23,
+  id: 24,
   name: "The Electric Bicycle Adventure",
   imageId: "bike"
 }];

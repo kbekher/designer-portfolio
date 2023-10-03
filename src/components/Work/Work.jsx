@@ -25,11 +25,11 @@ export const Work = () => {
     });
   }, []);
 
-  const posters = projects.slice(3, 15);
-  const posters1 = posters.splice(0, 3);
-  const posters2 = posters.splice(0, 3);
-  const posters3 = posters.splice(0, 3);
-  const posters4 = posters;
+  const posters1 = projects.slice(3, 6);
+  const posters2 =  projects.slice(6, 9);
+  const posters3 =  projects.slice(9, 12);
+  const posters4 = projects.slice(12, 15);
+
 
   const [selecetdItem, setSelectedItem] = useState('');
 
@@ -121,7 +121,8 @@ export const Work = () => {
               }
               duration={4000}
             >
-              {posters1.map(poster => (
+              {posters1.map(poster => {
+                return (
                 <div className="each-slide" key={poster.name}>
                   <Project
                     key={poster.name}
@@ -131,7 +132,8 @@ export const Work = () => {
                     onItemSelect={handleItemClick}
                   />
                 </div>
-              ))}
+              )
+                })}
             </Fade>
           </div>
           <div className="Work__project Work__project--slider Work__project--slider--poster">

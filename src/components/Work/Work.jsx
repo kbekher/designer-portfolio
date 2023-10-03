@@ -1,9 +1,16 @@
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-slideshow-image';
-import { projects } from "../../utils/projects";
+import { projects} from "../../utils/projects";
 import { Project } from '../Project';
 import './Work.scss';
 
+
+const posters = projects.slice(3, 15);
+const posterImages = [];
+
+for (const poster of posters) {
+  posterImages.push(poster.imageId);
+}
 
 export const Work = () => {
   useEffect(() => {
@@ -24,11 +31,6 @@ export const Work = () => {
       }
     });
   }, []);
-
-  // const posters1 = projects.slice(3, 6);
-  // const posters2 = projects.slice(6, 9);
-  // const posters3 = projects.slice(9, 12);
-  // const posters4 = projects.slice(12, 15);
 
   const [selecetdItem, setSelectedItem] = useState('');
 
@@ -109,47 +111,47 @@ export const Work = () => {
 
         {/* Poster1 */}
         {/* <div className="Work__section Work__section--split">
-          <div className="Work__project Work__project--slider Work__project--slider--poster">
+          <div className="Work__project Work__project--slider">
             <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(posters1[0].name)
-                || !isSelected(posters1[0].name)
-                || !isSelected(posters1[0].name)
+              autoplay={!isSelected("Divchata Agency")
+                || !isSelected("Star Porgis")
+                || !isSelected("Which Einstein are you today?")
               }
               duration={4000}
             >
-              {posters1.map(poster => (
-                <div className="each-slide" key={poster.imageId}>
-                  <Project
-                    key={poster.imageId}
-                    name={poster.name}
-                    image={poster.imageId}
-                    selecetdItem={selecetdItem}
-                    onItemSelect={handleItemClick}
-                  />
-                </div>
-              ))}
+              {posters1.map(img => (
+                  <div className="each-slide" key={img}>
+                    <Project
+                      // key={poster.imageId}
+                      name={getPosterName(img)}
+                      image={img}
+                      selecetdItem={selecetdItem}
+                      onItemSelect={handleItemClick}
+                    />
+                  </div>
+                ))}
             </Fade>
           </div>
-          <div className="Work__project Work__project--slider Work__project--slider--poster">
+          <div className="Work__project Work__project--slider">
             <Fade
               arrows={false}
               canSwipe={false}
               pauseOnHover={false}
-              autoplay={!isSelected(posters2[0].name)
-                || !isSelected(posters2[0].name)
-                || !isSelected(posters2[0].name)
+              autoplay={!isSelected("Film Speed Lab")
+                || !isSelected("Divided Layers")
+                || !isSelected("Fragment Design")
               }
               duration={4500}
             >
-              {posters2.map(poster => (
-                <div className="each-slide" key={poster.imageId}>
+              {posters2.map(img => (
+                <div className="each-slide" key={img}>
                   <Project
-                    key={poster.imageId}
-                    name={poster.name}
-                    image={poster.imageId}
+                    key={img}
+                    name={getPosterName(img)}
+                    image={img}
                     selecetdItem={selecetdItem}
                     onItemSelect={handleItemClick}
                   />
@@ -294,7 +296,7 @@ export const Work = () => {
 
         {/* Fatboy-LeonDore */}
         <div className="Work__section Work__section--split">
-        <div className="Work__project Work__project--slider">
+          <div className="Work__project Work__project--slider">
             <Fade
               arrows={false}
               canSwipe={false}
@@ -353,7 +355,7 @@ export const Work = () => {
         {/* Kids */}
         <div className="Work__section Work__section--split">
           {projects.slice(22, 24).map(item => (
-            <div className="Work__project" key={item.img}>
+            <div className="Work__project" key={item.id}>
               <Project
                 // key={item.img}
                 name={item.name}

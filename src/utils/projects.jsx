@@ -103,3 +103,46 @@ export const projects = [{
   name: "The Electric Bicycle Adventure",
   imageId: "bike"
 }];
+
+// const getPosterName = (img) => {
+//   switch (img) {
+//     case "divchata":
+//       return "Divchata Agency";
+
+//     case "porgis":
+//       return "Star Porgis";
+
+//     case "einstein":
+//       return "Which Einstein are you today?";
+
+//     case "fsl":
+//       return "Film Speed Lab";
+
+//     case "layers":
+//       return "Divided Layers";
+
+//     case "fragment":
+//       return "Fragment Design";
+
+//     case "switzerland":
+//       return "Switzerland";
+
+//     case "spots":
+//       return "Black and White spots";
+
+//     case "potential":
+//       return "Each day's potential";
+
+//     case "icy":
+//       return "b-n Studio";
+
+//     case "poster":
+//       return "Abstract Layers";
+
+//     case "rvtc":
+//       return "RVTC Rösterei Vier";
+
+//     default:
+//       return;
+//   }
+// };

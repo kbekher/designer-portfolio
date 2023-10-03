@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Fade } from 'react-slideshow-image';
 import projects from '../../utils/projects.json';
 import { Project } from '../Project/Project';
-import { Slider } from './Slider';
 import './Work.scss';
 
 

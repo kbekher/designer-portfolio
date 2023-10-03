@@ -1,4 +1,4 @@
-import socialLinks from '../../utils/links.json';
+import { links } from '../../utils/links';
 import { Form } from '../Form/Form';
 
 import './About.scss';
@@ -45,7 +45,7 @@ export const About = () => {
               </h3>
 
               <div className="About__socials">
-                {socialLinks.map(link => (
+                {links.map(link => (
                   <a
                     key={link.id}
                     href={link.url}

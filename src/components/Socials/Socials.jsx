@@ -1,4 +1,4 @@
-import socialLinks from '../../utils/links';
+import { links } from '../../utils/links';
 import './Socials.scss';
 
 const SocialLink = ({ name, url }) => {
@@ -19,7 +19,7 @@ const SocialLink = ({ name, url }) => {
 
 export const Socials = () => (
   <div className="Socials">
-    {socialLinks.map(link => (
+    {links.map(link => (
       <SocialLink
         key={link.id}
         name={link.name}

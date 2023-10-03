@@ -12,23 +12,55 @@
   },
   {
     "name": "Amsterdam's Enchanting Facades",
-    "image":"amster"
+    "image": "amster"
   },
   {
-    "names": ["Divchata Agency", "Star Porgis", "Which Einstein are you today?"],
-    "images": ["divchata", "porgis", "einstein"]
+    "names": [
+      "Divchata Agency",
+      "Star Porgis",
+      "Which Einstein are you today?"
+    ],
+    "images": [
+      "divchata",
+      "porgis",
+      "einstein"
+    ]
   },
   {
-    "names": ["Divided Layers", "Film Speed Lab", "Fragment Design"],
-    "images": ["layers", "fsl", "fragment"]
+    "names": [
+      "Divided Layers",
+      "Film Speed Lab",
+      "Fragment Design"
+    ],
+    "images": [
+      "layers",
+      "fsl",
+      "fragment"
+    ]
   },
   {
-    "names": ["Switzerland", "Black and White spots", "Each day's potential"],
-    "images":["switzerland", "spots", "potential"]
+    "names": [
+      "Switzerland",
+      "Black and White spots",
+      "Each day's potential"
+    ],
+    "images": [
+      "switzerland",
+      "spots",
+      "potential"
+    ]
   },
   {
-    "names": ["b-n Studio", "poster", "RVTC Rösterei Vier"],
-    "images":["icy", "poster", "rvtc"]
+    "names": [
+      "b-n Studio",
+      "poster",
+      "RVTC Rösterei Vier"
+    ],
+    "images": [
+      "icy",
+      "poster",
+      "rvtc"
+    ]
   },
   {
     "name": "Accidentlly Wes Anderson",
@@ -63,8 +95,7 @@
     "name": "Organic Chocolatte (Visual identity)",
     "images": [
       "organic1",
-      "organic2",
-      "organic3"
+      "organic2"
     ]
   },
   {

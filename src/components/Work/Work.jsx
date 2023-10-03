@@ -299,14 +299,6 @@ export const Work = () => {
                   onItemSelect={handleItemClick}
                 />
               </div>
-              {/* <div className="each-slide">
-                <Project
-                  name={projects[12].name}
-                  image={projects[12].images[2]}
-                  selecetdItem={selecetdItem}
-                  onItemSelect={handleItemClick}
-                />
-              </div> */}
             </Fade>
           </div>
         </div>

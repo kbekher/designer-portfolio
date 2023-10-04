@@ -55,3 +55,20 @@
     }
   }
 }
+
+
+.PosterSlider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__slide {
+    position: absolute;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

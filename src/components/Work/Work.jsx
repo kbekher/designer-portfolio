@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Fade } from 'react-slideshow-image';
+// import 'react-slideshow-image/dist/styles.css';
+
 import { projects } from "../../utils/projects";
 import { Project } from '../Project';
+import { PosterSlider } from '../Project/PosterSlider';
+
 import './Work.scss';
 
 export const Work = () => {
@@ -22,7 +26,7 @@ export const Work = () => {
         }
       }
     });
-  }, []); 
+  }, []);
 
   const [selecetdItem, setSelectedItem] = useState('');
 
@@ -101,104 +105,46 @@ export const Work = () => {
         </div>
 
         {/* Poster1 */}
-        {/* <div className="Work__section Work__section--split">
+        <div className="Work__section Work__section--split">
           <div className="Work__project Work__project--slider">
-            <Fade
-              arrows={false}
-              canSwipe={false}
-              pauseOnHover={false}
-              autoplay={!isSelected(posters[0].names[0])
-                && !isSelected(posters[0].names[1])
-                && !isSelected(posters[0].names[2])
-              }
-            >
-              {posters[0].imageIds.map((img, i) =>{
-                return  (
-                  <div className="each-slide" key={img}>
-                    <Project
-                      name={posters[0].names[i]}
-                      image={img}
-                      selecetdItem={selecetdItem}
-                      onItemSelect={handleItemClick}
-                    />
-                  </div>
-                );
-              })}
-            </Fade>
+            <PosterSlider
+              posters={projects.slice(3, 6)}
+              delay={5000}
+              // selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
           </div>
           <div className="Work__project Work__project--slider">
-            <Fade
-              arrows={false}
-              canSwipe={false}
-              pauseOnHover={false}
-              autoplay={!isSelected(posters[1].names[0])
-                && !isSelected(posters[1].names[1])
-                && !isSelected(posters[1].names[2])
-              }
-            >
-              {posters[1].imageIds.map((img, i) => (
-                <div className="each-slide" key={img}>
-                  <Project
-                    name={posters[1].names[i]}
-                    image={img}
-                    selecetdItem={selecetdItem}
-                    onItemSelect={handleItemClick}
-                  />
-                </div>
-              ))}
-            </Fade>
+            <PosterSlider
+              posters={projects.slice(6, 9)}
+              delay={4300}
+              // selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
           </div>
-        </div> */}
+        </div>
+  
 
         {/* Poster2 */}
-        {/* <div className="Work__section Work__section--split">
+        <div className="Work__section Work__section--split">
           <div className="Work__project Work__project--slider Work__project--slider--poster">
-            <Fade
-              arrows={false}
-              canSwipe={false}
-              pauseOnHover={false}
-              autoplay={!isSelected(posters3[0].name)
-                || !isSelected(posters3[0].name)
-                || !isSelected(posters3[0].name)
-              }
-              duration={4800}
-            >
-              {posters3.map(poster => (
-                <div className="each-slide" key={poster.imageId}>
-                  <Project
-                    name={poster.name}
-                    image={poster.imageId}
-                    selecetdItem={selecetdItem}
-                    onItemSelect={handleItemClick}
-                  />
-                </div>
-              ))}
-            </Fade>
+          <PosterSlider
+              posters={projects.slice(9, 12)}
+              delay={4200}
+              // selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
           </div>
           <div className="Work__project Work__project--slider Work__project--slider--poster">
-            <Fade
-              arrows={false}
-              canSwipe={false}
-              pauseOnHover={false}
-              autoplay={!isSelected(posters4[0].name)
-                || !isSelected(posters4[0].name)
-                || !isSelected(posters4[0].name)
-              }
-              duration={5000}
-            >
-              {posters4.map(poster => (
-                <div className="each-slide" key={poster.imageId}>
-                  <Project
-                    name={poster.name}
-                    image={poster.imageId}
-                    selecetdItem={selecetdItem}
-                    onItemSelect={handleItemClick}
-                  />
-                </div>
-              ))}
-            </Fade>
+          <PosterSlider
+              posters={projects.slice(12, 15)}
+              delay={4600}
+              // selecetdItem={selecetdItem}
+              onItemSelect={handleItemClick}
+            />
+
           </div>
-        </div> */}
+        </div>
 
         {/* Awa-Tropicfeel */}
         <div className="Work__section Work__section--split">

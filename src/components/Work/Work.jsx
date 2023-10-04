@@ -109,7 +109,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <PosterSlider
               posters={projects.slice(3, 6)}
-              delay={5000}
+              duration={5000}
               // selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -117,7 +117,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <PosterSlider
               posters={projects.slice(6, 9)}
-              delay={4300}
+              duration={4300}
               // selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -130,7 +130,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider Work__project--slider--poster">
           <PosterSlider
               posters={projects.slice(9, 12)}
-              delay={4200}
+              duration={4200}
               // selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />
@@ -138,7 +138,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider Work__project--slider--poster">
           <PosterSlider
               posters={projects.slice(12, 15)}
-              delay={4600}
+              duration={4600}
               // selecetdItem={selecetdItem}
               onItemSelect={handleItemClick}
             />

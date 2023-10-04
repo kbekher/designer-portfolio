@@ -6,7 +6,7 @@ import './Project.scss';
 
 export const PosterSlider = ({
   posters,
-  delay,
+  duration,
   // selecetdItem,
   onItemSelect,
 }) => {
@@ -17,7 +17,7 @@ export const PosterSlider = ({
         arrows={false}
         canSwipe={false}
         pauseOnHover={false}
-        delay={delay}
+        duration={duration}
       >
         {posters.map(poster => (
           <div

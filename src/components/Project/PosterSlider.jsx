@@ -36,9 +36,9 @@ export const PosterSlider = ({
               className="PosterSlider__content-container"
               // style={{ opacity: selectedItem === poster.name ? '1' : '0' }}
             >
-              <h2 className='PosterSlider__title'>
+              <h3 className='PosterSlider__title'>
                 {poster.name}
-              </h2>
+              </h3>
             </div>
           </div>
         ))}

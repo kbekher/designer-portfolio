@@ -104,25 +104,3 @@ export const projects = [{
   imageId: "bike"
 }];
 
-// export const posters =  [
-//   {
-//   id: 0,
-//   names: ["Divchata Agency", "Star Porgis", "Which Einstein are you today?"],
-//   imageIds: [ "divchata", "porgis", "einstein" ]
-// },
-//   {
-//   id: 1,
-//   names: ["Film Speed Lab", "Divided Layers", "Fragment Design"],
-//   imageIds: [ "fsl", "layers", "fragment" ]
-// },
-//   {
-//   id: 2,
-//   names: ["Switzerland", "Black and White spots", "Each day's potential"],
-//   imageIds: [ "switzerland", "spots", "potential" ]
-// },
-//   {
-//   id: 3,
-//   names: ["b-n Studio", "Abstract Layers", "RVTC Rösterei Vier"],
-//   imageIds: [ "icy", "poster", "rvtc" ]
-// },
-// ];

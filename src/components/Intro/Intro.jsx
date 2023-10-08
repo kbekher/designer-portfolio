@@ -44,30 +44,49 @@ export const Intro = () => {
   const [vh, setVh] = useState(window.innerHeight * 0.01);
 
   useEffect(() => {
-      setVh(window.innerHeight * 0.01);
+    setVh(window.innerHeight * 0.01);
   }, []);
 
-return (
-  <TransitionGroup>
-    <div className="Intro"   style={{
+  return (
+    <TransitionGroup>
+      <div className="Intro" style={{
         height: `calc(${vh}px * 100)`,
       }}
       >
-      <h1 className="visually-hidden">Ivan Inozemtsev</h1>
+        <h1 className="visually-hidden">Ivan Inozemtsev</h1>
 
-      <div className="Intro__content">
-        <div className="Intro__holder">
-          <CSSTransition in appear timeout={duration1}>
+        <div className="Intro__content">
+          <div className="Intro__holder">
+            <CSSTransition in appear timeout={duration1}>
+              {(state) => (
+                <img
+                  className="Intro__title-img"
+                  style={{
+                    ...defaultTitleStyle,
+                    ...transitionTitleStyles[state],
+                  }}
+                  src="./images/intro/title.webp"
+                  alt="Ivan Inozemtsev"
+                />
+              )}
+            </CSSTransition>
+          </div>
+
+          <CSSTransition in appear timeout={duration2}>
             {(state) => (
-              <img
-                className="Intro__title-img"
+              <div
+                className="Intro__sub-container"
                 style={{
-                  ...defaultTitleStyle,
-                  ...transitionTitleStyles[state],
+                  ...defaultSubtitleStyle,
+                  ...transitionSubtitleStyles[state],
                 }}
-                src="./images/intro/title.webp"
-                alt="Ivan Inozemtsev"
-              />
+              >
+                <p className="Intro__subtitle">
+                  Ukrainian designer & illustrator based in Germany.
+                  Please visit my Instagram to keep up with my latest work.
+                </p>
+              </div>
+
             )}
           </CSSTransition>
         </div>
@@ -75,35 +94,16 @@ return (
         <CSSTransition in appear timeout={duration2}>
           {(state) => (
             <div
-              className="Intro__sub-container"
+              className="Intro__bg-container"
               style={{
-                ...defaultSubtitleStyle,
-                ...transitionSubtitleStyles[state],
+                ...defaultBgStyle,
+                ...transitionBgStyles[state],
               }}
             >
-              <p className="Intro__subtitle">
-                Ukrainian designer & illustrator based in Germany.
-                Please visit my Instagram to keep up with my latest work.
-              </p>
             </div>
-
           )}
         </CSSTransition>
       </div>
-
-      <CSSTransition in appear timeout={duration2}>
-        {(state) => (
-          <div
-            className="Intro__bg-container"
-            style={{
-              ...defaultBgStyle,
-              ...transitionBgStyles[state],
-            }}
-          >
-          </div>
-        )}
-      </CSSTransition>
-    </div>
-  </TransitionGroup>
-);
-          };
+    </TransitionGroup>
+  );
+};

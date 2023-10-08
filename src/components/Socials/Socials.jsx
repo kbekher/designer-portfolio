@@ -8,6 +8,7 @@ const SocialLink = ({ name, url }) => {
     <a
       href={url}
       target="_blank"
+      title={`Ivan's ${name}`}
       rel="noreferrer"
       className="SocialLink"
       style={{ backgroundImage: `url(${backgroundImage})` }}

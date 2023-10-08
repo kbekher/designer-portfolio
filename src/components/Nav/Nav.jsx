@@ -43,7 +43,11 @@ export const Nav = () => {
           </Link>
         </li>
         <li className="Nav__item">
-          <a href="mailto:Inozemtsevco@gmail.com" className="Nav__link">
+          <a 
+            href="mailto:Inozemtsevco@gmail.com" 
+            title="Ivan's mail"
+            className="Nav__link"
+          >
             Contact
           </a>
         </li>

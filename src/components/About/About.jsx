@@ -50,6 +50,7 @@ export const About = () => {
                     key={link.id}
                     href={link.url}
                     alt={`Ivan's ${link.name}`}
+                    title={`Ivan's ${link.name}`}
                     target="_blank"
                     rel="noreferrer"
                     className="About__contact-link"
@@ -69,6 +70,7 @@ export const About = () => {
               <a
                 href="./images/about/certificate.webp"
                 target="_blank"
+                title="Ivan's Projector Certificate"
                 rel="noreferrer"
                 className="About__certificate-link"
               >

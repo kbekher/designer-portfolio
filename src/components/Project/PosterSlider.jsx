@@ -7,8 +7,8 @@ import './Project.scss';
 export const PosterSlider = ({
   posters,
   duration,
-  // selecetdItem,
-  onItemSelect,
+  // selectedItem,
+  // onItemSelect,
 }) => {
 
   return (
@@ -23,7 +23,7 @@ export const PosterSlider = ({
           <div
             key={poster.id}
             className='PosterSlider__slide'
-            onClick={() => onItemSelect(poster.name)}
+            // onClick={() => onItemSelect(poster.name)}
           >
             <div>
               <img
@@ -32,12 +32,14 @@ export const PosterSlider = ({
                 className='PosterSlider__img'
               />
             </div>
-            {/* <h2 
-              className='Poster__title'
-              style={{opacity: selecetdItem === poster.name ? '1' : '0'}}
+            <div
+              className="PosterSlider__content-container"
+              // style={{ opacity: selectedItem === poster.name ? '1' : '0' }}
             >
-              {poster.name}
-            </h2> */}
+              <h2 className='PosterSlider__title'>
+                {poster.name}
+              </h2>
+            </div>
           </div>
         ))}
       </Fade>

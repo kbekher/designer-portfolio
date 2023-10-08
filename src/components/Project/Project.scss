@@ -71,4 +71,42 @@
     height: 100%;
     object-fit: cover;
   }
+
+  &__content-container {
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    background-color: $color-background-project;
+    transition: $transition;
+    opacity: 0;
+  }
+
+  &__title {
+    font-size: 24px;
+    letter-spacing: 0.1em;
+    font-weight: 200;
+    max-width: 70%;
+    text-align: center;
+
+    @include onTablet {
+      font-size: 36px;
+    }
+  }
+}
+
+
+.each-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }

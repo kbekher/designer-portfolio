@@ -60,14 +60,14 @@ export const Work = () => {
           <div className="Work__project">
             <Project
               project={projects[0]}
-              selectedItem={selectedItem}
+              isSelected={projects[0].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
           <div className="Work__project Work__project--slider Work__project--slider--first">
             <Project
               project={projects[1]}
-              selectedItem={selectedItem}
+              isSelected={projects[1].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
@@ -78,7 +78,7 @@ export const Work = () => {
           <div className="Work__project">
             <Project
               project={projects[2]}
-              selectedItem={selectedItem}
+              isSelected={projects[2].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
@@ -90,7 +90,10 @@ export const Work = () => {
             <PosterSlider
               posters={projects.slice(3, 6)}
               duration={5000}
-              // selectedItem={selectedItem}
+              isSelected={projects[3].name === selectedItem
+                || projects[4].name === selectedItem
+                || projects[5].name === selectedItem
+              }
               onItemSelect={handleItemClick}
             />
           </div>
@@ -98,7 +101,10 @@ export const Work = () => {
             <PosterSlider
               posters={projects.slice(6, 9)}
               duration={4300}
-              // selectedItem={selectedItem}
+              isSelected={projects[6].name === selectedItem
+                || projects[7].name === selectedItem
+                || projects[8].name === selectedItem
+              }
               onItemSelect={handleItemClick}
             />
           </div>
@@ -110,7 +116,10 @@ export const Work = () => {
             <PosterSlider
               posters={projects.slice(9, 12)}
               duration={4200}
-              // selectedItem={selectedItem}
+              isSelected={projects[9].name === selectedItem
+                || projects[10].name === selectedItem
+                || projects[11].name === selectedItem
+              }
               onItemSelect={handleItemClick}
             />
           </div>
@@ -118,10 +127,12 @@ export const Work = () => {
             <PosterSlider
               posters={projects.slice(12, 15)}
               duration={4600}
-              // selectedItem={selectedItem}
+              isSelected={projects[12].name === selectedItem
+                || projects[13].name === selectedItem
+                || projects[14].name === selectedItem
+              }
               onItemSelect={handleItemClick}
             />
-
           </div>
         </div>
 
@@ -130,7 +141,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <Project
               project={projects[15]}
-              selectedItem={selectedItem}
+              isSelected={projects[15].name === selectedItem}
               onItemSelect={handleItemClick}
               duration={4500}
             />
@@ -138,7 +149,7 @@ export const Work = () => {
           <div className="Work__project">
             <Project
               project={projects[16]}
-              selectedItem={selectedItem}
+              isSelected={projects[16].name === selectedItem}
               onItemSelect={handleItemClick}
               duration={4500}
             />
@@ -150,7 +161,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <Project
               project={projects[17]}
-              selectedItem={selectedItem}
+              isSelected={projects[17].name === selectedItem}
               onItemSelect={handleItemClick}
               duration={4500}
             />
@@ -158,7 +169,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider Work__project--slider--last">
             <Project
               project={projects[18]}
-              selectedItem={selectedItem}
+              isSelected={projects[18].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
@@ -169,7 +180,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <Project
               project={projects[19]}
-              selectedItem={selectedItem}
+              isSelected={projects[19].name === selectedItem}
               onItemSelect={handleItemClick}
               duration={4000}
             />
@@ -177,7 +188,7 @@ export const Work = () => {
           <div className="Work__project Work__project--slider">
             <Project
               project={projects[20]}
-              selectedItem={selectedItem}
+              isSelected={projects[20].name === selectedItem}
               onItemSelect={handleItemClick}
               duration={4800}
             />
@@ -189,7 +200,7 @@ export const Work = () => {
           <div className="Work__project">
             <Project
               project={projects[21]}
-              selectedItem={selectedItem}
+              isSelected={projects[21].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
@@ -201,20 +212,19 @@ export const Work = () => {
             <div className="Work__project" key={item.id}>
               <Project
                 project={item}
-                selectedItem={selectedItem}
+                isSelected={item.name === selectedItem}
                 onItemSelect={handleItemClick}
               />
             </div>
           ))}
         </div>
 
-
         {/* Bike */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
               project={projects[24]}
-              selectedItem={selectedItem}
+              isSelected={projects[24].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>

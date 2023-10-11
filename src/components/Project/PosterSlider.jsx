@@ -2,15 +2,15 @@ import React from 'react';
 import { Fade } from 'react-slideshow-image';
 // import 'react-slideshow-image/dist/styles.css';
 
+import { ProjectImage } from './ProjectImage';
 import './Project.scss';
 
 export const PosterSlider = ({
   posters,
   duration,
-  // selectedItem,
-  // onItemSelect,
+  isSelected,
+  onItemSelect,
 }) => {
-
   return (
     <div className="PosterSlider">
       <Fade
@@ -18,29 +18,18 @@ export const PosterSlider = ({
         canSwipe={false}
         pauseOnHover={false}
         duration={duration}
+        autoplay={!isSelected}
       >
         {posters.map(poster => (
-          <div
-            key={poster.id}
-            className='PosterSlider__slide'
-            // onClick={() => onItemSelect(poster.name)}
-          >
-            <div>
-              <img
-                src={`./images/work/${poster.imageId}.webp`}
-                alt={poster.name}
-                className='PosterSlider__img'
-              />
-            </div>
-            <div
-              className="PosterSlider__content-container"
-              // style={{ opacity: selectedItem === poster.name ? '1' : '0' }}
-            >
-              <h3 className='PosterSlider__title'>
-                {poster.name}
-              </h3>
-            </div>
-          </div>
+           <div className="each-slide" key={poster.id}>
+           <ProjectImage
+             img={poster.imageId}
+             name={poster.name}
+             subtitle={poster.subtitle}
+             isSelected={isSelected}
+             onClick={() => onItemSelect(poster.name)}
+           />
+         </div>
         ))}
       </Fade>
     </div>

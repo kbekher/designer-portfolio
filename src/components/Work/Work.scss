@@ -87,7 +87,7 @@
       }
 
       &--first,
-      &--last{
+      &--last {
         @include onTablet {
           margin-bottom: 0;
         }

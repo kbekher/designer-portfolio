@@ -9,6 +9,7 @@ export const ProjectImage = ({
   img,
   name,
   subtitle = '',
+  url = '',
   isSelected,
   onClick,
 }) => {
@@ -28,10 +29,22 @@ export const ProjectImage = ({
           <h3 className="ProjectImage__title">
             {name}
           </h3>
+
           {subtitle && (
             <span className="ProjectImage__subtitle">
               {subtitle}
             </span>
+          )}
+
+          {url &&(
+            <a 
+              href={url} 
+              target="_blank"
+              rel="noreferrer"
+              className="ProjectImage__link"
+            >
+              See Project on Behance →
+            </a>
           )}
         </div>
       </div>

@@ -55,22 +55,23 @@ export const Work = () => {
       </div>
 
       <div className="Work__projects">
-        {/* Simmons-Lasso */}
+        {/* Wine-Grinch */}
         <div className="Work__section Work__section--split">
-          <div className="Work__project">
+        <div className="Work__project Work__project--slider Work__project--slider--first">
             <Project
               project={projects[0]}
               isSelected={projects[0].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
-          <div className="Work__project Work__project--slider Work__project--slider--first">
+          <div className="Work__project">
             <Project
               project={projects[1]}
               isSelected={projects[1].name === selectedItem}
               onItemSelect={handleItemClick}
             />
           </div>
+
         </div>
 
         {/* Amster */}

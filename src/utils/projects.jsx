@@ -1,15 +1,15 @@
 export const projects = [{
   id: 0, 
-  name: "Daniel Simmons",
-  imageId: "simmons"
+  name: "Aura Wine Collective",
+  imageIds: [ "wine1", "wine2", "wine3", "wine4" ]
 }, {
   id: 1, 
-  name: 'Lasso Way',
-  imageIds: [ "lasso1", "lasso2"]
+  name: 'The Holiday Is Coming...',
+  imageId: "grinch"
 }, {
   id: 2, 
-  name: `Amsterdam's Enchanting Facades`,
-  imageId: "amster"
+  name: `Breath of the Alps`,
+  imageId: "alps"
 }, {
   id: 3,
   name: "Divchata Agency",
@@ -71,12 +71,12 @@ export const projects = [{
 }, {
   id: 17,
   name: "Media Development Foundation",
-  subtitle: "(Visual identity)",
+  subtitle: "Visual identity",
   imageIds: [ "mdf1", "mdf2", "mdf3", "mdf4" ]
 }, {
   id: 18,
   name: "Organic Chocolatte",
-  subtitle: "(Visual identity)",
+  subtitle: "Visual identity",
   imageIds: [ "organic1", "organic2" ]
 }, {
   id: 19,
@@ -88,8 +88,9 @@ export const projects = [{
   imageIds: [ "fatboy1", "fatboy2", "fatboy3" ]
 },  {
   id: 21,
-  name: "Every Face Tells a Unique Story, Together We Write History",
-  imageId: "faces"
+  name: "Make Your Work Stand Out",
+  url: "https://www.behance.net/gallery/185380003/Make-your-work-standout",
+  imageId: "business"
 }, {
   id: 22,
   name: "Kids",
@@ -100,7 +101,7 @@ export const projects = [{
   imageId:  "emotions"
 }, {
   id: 24,
-  name: "The Electric Bicycle Adventure",
-  imageId: "bike"
+  name: "Symphony of Peaks",
+  imageId: "peaks"
 }];
 

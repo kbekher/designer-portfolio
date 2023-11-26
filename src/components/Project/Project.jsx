@@ -11,7 +11,7 @@ export const Project = ({
   onItemSelect,
   duration = 5000,
 }) => {
-  const { name, imageId, imageIds, subtitle } = project;
+  const { name, imageId, imageIds, subtitle, url } = project;
 
   let element;
 
@@ -20,6 +20,7 @@ export const Project = ({
       img={imageId}
       name={name}
       subtitle={subtitle}
+      url={url}
       isSelected={isSelected}
       onClick={() => onItemSelect(name)}
     />;
@@ -39,6 +40,7 @@ export const Project = ({
             img={img}
             name={name}
             subtitle={subtitle}
+            url={url}
             isSelected={isSelected}
             onClick={() => onItemSelect(name)}
           />

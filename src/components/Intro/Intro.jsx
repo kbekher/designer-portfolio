@@ -1,7 +1,7 @@
+import { useEffect, useState } from 'react';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import './Intro.scss';
-import { useEffect, useState } from 'react';
 
 //#region animations
 const duration1 = 400; // Animation duration in milliseconds

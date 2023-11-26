@@ -22,10 +22,11 @@ export const ProjectImage = ({
           className="ProjectImage__image"
         />
 
-        <div 
-          className="ProjectImage__content-container" 
+        <div
+          className="ProjectImage__content-container"
           style={{ opacity: isSelected ? '1' : '0' }}
         >
+
           <h3 className="ProjectImage__title">
             {name}
           </h3>
@@ -36,12 +37,13 @@ export const ProjectImage = ({
             </span>
           )}
 
-          {url &&(
-            <a 
-              href={url} 
+          {url && (
+            <a
+              href={url}
               target="_blank"
               rel="noreferrer"
               className="ProjectImage__link"
+              onClick={!isSelected ? (e) => e.preventDefault() : undefined}
             >
               See Project on Behance →
             </a>

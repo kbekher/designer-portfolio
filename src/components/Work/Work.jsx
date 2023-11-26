@@ -74,7 +74,7 @@ export const Work = () => {
 
         </div>
 
-        {/* Amster */}
+        {/* Alps */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
@@ -196,7 +196,7 @@ export const Work = () => {
           </div>
         </div>
 
-        {/* Faces */}
+        {/* Business */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project
@@ -220,7 +220,7 @@ export const Work = () => {
           ))}
         </div>
 
-        {/* Bike */}
+        {/* Peaks */}
         <div className="Work__section Work__section--full">
           <div className="Work__project">
             <Project

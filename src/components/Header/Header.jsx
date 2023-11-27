@@ -44,7 +44,7 @@ export const Header = () => {
 
   const handleHeaderHover = () => {
     setVisible(true);
-  };
+  }
 
   return (
     <Transition in appear timeout={duration}>
@@ -62,16 +62,22 @@ export const Header = () => {
               <Logo />
             </div>
 
-            <div
-              className="Header__nav"
-              style={{ opacity: visible ? 1 : 0 }}
+            <div 
+              className="Header__nav" 
+              style={{ 
+                opacity: visible ? 1 : 0,
+                visibility: visible ? 'visible' : 'hidden'
+              }}
             >
               <Nav />
             </div>
 
-            <div
-              className="Header__socials"
-              style={{ opacity: visible ? 1 : 0 }}
+            <div 
+              className="Header__socials" 
+              style={{ 
+                opacity: visible ? 1 : 0,
+                visibility: visible ? 'visible' : 'hidden'
+              }}
             >
               <Socials />
             </div>

@@ -12,9 +12,14 @@ export const ProjectImage = ({
   url = '',
   isSelected,
   onClick,
+  onMouseLeave,
 }) => {
   return (
-    <div className="ProjectImage" onClick={onClick}>
+    <div 
+      className="ProjectImage" 
+      onClick={onClick}
+      onMouseLeave={onMouseLeave}
+    >
       <div className="ProjectImage__wrapper">
         <img
           src={getUrl(img)}

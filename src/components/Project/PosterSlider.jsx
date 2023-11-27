@@ -21,15 +21,16 @@ export const PosterSlider = ({
         autoplay={!isSelected}
       >
         {posters.map(poster => (
-           <div className="each-slide" key={poster.id}>
-           <ProjectImage
-             img={poster.imageId}
-             name={poster.name}
-             subtitle={poster.subtitle}
-             isSelected={isSelected}
-             onClick={() => onItemSelect(poster.name)}
-           />
-         </div>
+          <div className="each-slide" key={poster.id}>
+            <ProjectImage
+              img={poster.imageId}
+              name={poster.name}
+              subtitle={poster.subtitle}
+              isSelected={isSelected}
+              onClick={() => onItemSelect(poster.name)}
+              onMouseLeave={() => onItemSelect('')}
+            />
+          </div>
         ))}
       </Fade>
     </div>

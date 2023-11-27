@@ -23,6 +23,7 @@ export const Project = ({
       url={url}
       isSelected={isSelected}
       onClick={() => onItemSelect(name)}
+      onMouseLeave={() => onItemSelect('')}
     />;
   }
 
@@ -43,6 +44,7 @@ export const Project = ({
             url={url}
             isSelected={isSelected}
             onClick={() => onItemSelect(name)}
+            onMouseLeave={() => onItemSelect('')}
           />
         </div>
       ))}

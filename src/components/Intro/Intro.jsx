@@ -82,8 +82,8 @@ export const Intro = () => {
                 }}
               >
                 <p className="Intro__subtitle">
-                  Ukrainian designer & illustrator based in Germany.
-                  Please visit my Instagram to keep up with my latest work.
+                  Hey there! I'm a Ukrainian designer and illustrator working from Germany.
+                  Catch my latest works on Instagram!
                 </p>
               </div>
 

@@ -12,7 +12,21 @@ import './App.scss';
 export const App = () => {
   const { isMenuOpen } = useContext(MenuContext);
 
-  useEffect(() => window.scrollTo({ top: 0.5}), []);
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      window.scrollTo(0, 0);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   useEffect(() => {
     isMenuOpen

@@ -23,7 +23,7 @@ const transitionStyles = {
 //#endregion
 
 export const Header = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0.5);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export const Header = () => {
 
   const handleHeaderHover = () => {
     setVisible(true);
-  }
+  };
 
   return (
     <Transition in appear timeout={duration}>

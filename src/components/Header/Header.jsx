@@ -1,4 +1,6 @@
+import { useState, useEffect } from 'react';
 import { Transition } from 'react-transition-group';
+
 import { Logo } from '../Logo';
 import { Nav } from '../Nav';
 import { Hamburger } from '../Hamburger';
@@ -20,34 +22,66 @@ const transitionStyles = {
 };
 //#endregion
 
-export const Header = () => (
-  <Transition in appear timeout={duration}>
-    {(state) => (
-      <header
-        className="Header slide-in-component"
-        style={{
-          ...defaultStyle,
-          ...transitionStyles[state],
-        }}
-      >
-        <div className="Header__content">
-          <div className="Header__logo">
-            <Logo />
-          </div>
+export const Header = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0.5);
+  const [visible, setVisible] = useState(true);
 
-          <div className="Header__nav">
-            <Nav />
-          </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
 
-          <div className="Header__socials" >
-            <Socials />
-          </div>
+      setVisible(prevScrollPos > currentScrollPos);
 
-          <div className="Header__hamburger">
-            <Hamburger />
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
+  const handleHeaderHover = () => {
+    setVisible(true);
+  }
+
+  return (
+    <Transition in appear timeout={duration}>
+      {(state) => (
+        <header
+          className="Header slide-in-component"
+          style={{
+            ...defaultStyle,
+            ...transitionStyles[state],
+          }}
+          onMouseEnter={handleHeaderHover}
+        >
+          <div className="Header__content">
+            <div className="Header__logo">
+              <Logo />
+            </div>
+
+            <div
+              className="Header__nav"
+              style={{ opacity: visible ? 1 : 0 }}
+            >
+              <Nav />
+            </div>
+
+            <div
+              className="Header__socials"
+              style={{ opacity: visible ? 1 : 0 }}
+            >
+              <Socials />
+            </div>
+
+            <div className="Header__hamburger">
+              <Hamburger />
+            </div>
           </div>
-        </div>
-      </header>
-    )}
-  </Transition>
-);
+        </header>
+      )}
+    </Transition>
+  );
+};

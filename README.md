@@ -1,6 +1,6 @@
 # Designer and Illustrator Portfolio Website 👨🏻‍💻
 
-This is a portfolio website showcasing the work of a designer and illustrator. The website is designed to highlight the skills, experience, and projects of the designer and illustrator, providing an interactive and visually appealing experience for visitors.
+This is a live portfolio website showcasing the work of a designer and illustrator. The website is designed to highlight the skills, experience, and projects of the designer and illustrator, providing an interactive and visually appealing experience for visitors.
 
 ## Features
 
@@ -16,13 +16,11 @@ This is a portfolio website showcasing the work of a designer and illustrator. T
 - SCSS(SASS)
 - JavaScript
 
-## Usage
+## Visit the website by the following link
 
-To view the website locally or make changes to it, follow these steps:
+https://inozemtsevco.com/
 
-1. Clone the repository: git clone https://github.com/your-username/designer-illustrator-portfolio.git
-2. Install the required dependencies by running npm install in the project directory.
-3. Start the development server by running npm start.
-4. Open your preferred web browser and navigate to http://localhost:3000 to view the website.
-5. Modify the React components, CSS files, or any other relevant files to make changes to the website.
-6. The website will automatically reload if you save the changes.
+## Preview
+
+![Preview](./public/images/demo.png)
+

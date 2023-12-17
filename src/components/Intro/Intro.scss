@@ -32,6 +32,10 @@
     @include onDesktop {
       width: 60%;
     }
+
+    @include onLargeScreen {
+      width: 100%;
+    }
   }
 
   &__title-img {
@@ -56,6 +60,13 @@
     @include onDesktop {
       max-width: 280px;
     }
+
+    @include onLargeScreen {
+      height: 400px;
+      max-width: 450px;
+      left: -10%;
+      bottom: -250px;
+    }
   }
 
   &__subtitle {
@@ -77,6 +88,11 @@
       width: 180px;
       font-size: 18px;
     }
+
+    @include onLargeScreen {
+      width: 300px;
+      font-size: 26px;
+    }
   }
 
   &__bg-container {
@@ -96,6 +112,10 @@
 
     @include onDesktop {
       max-height: 320px;
+    }
+
+    @include onLargeScreen {
+      max-height: 500px;
     }
   }
 }

@@ -31,7 +31,6 @@ export const ProjectImage = ({
           className="ProjectImage__content-container"
           style={{ opacity: isSelected ? '1' : '0' }}
         >
-
           <h3 className="ProjectImage__title">
             {name}
           </h3>

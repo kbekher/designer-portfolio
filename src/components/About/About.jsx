@@ -4,6 +4,8 @@ import { Form } from '../Form/Form';
 import './About.scss';
 
 export const About = () => {
+  const socialLinks = [...links, { id: 3, name: "linkedin", url: "https://www.linkedin.com/in/inozemtsevco/" }];
+
   return (
     <div className="About" id="about">
       <div className="About__content">
@@ -45,7 +47,7 @@ export const About = () => {
               </h3>
 
               <div className="About__socials">
-                {links.map(link => (
+                {socialLinks.map(link => (
                   <a
                     key={link.id}
                     href={link.url}

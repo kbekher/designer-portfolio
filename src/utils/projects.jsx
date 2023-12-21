@@ -4,8 +4,8 @@ export const projects = [{
   imageIds: [ "wine1", "wine2", "wine3", "wine4" ]
 }, {
   id: 1, 
-  name: "The Holiday Is Coming...",
-  imageId: "grinch"
+  name: "Christmas Tree Toys",
+  imageId: "toys"
 }, {
   id: 2, 
   name: "Breath of the Alps",
@@ -95,8 +95,8 @@ export const projects = [{
   imageId: "business"
 }, {
   id: 22,
-  name: "Kids",
-  imageId: "kids1"
+  name: "The Holiday Is Coming...",
+  imageId: "grinch"
 }, {
   id: 23,
   name: "Emotions",

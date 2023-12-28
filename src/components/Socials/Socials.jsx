@@ -1,6 +1,8 @@
 import { links } from '../../utils/links';
 import './Socials.scss';
 
+const selectedLinks = links.slice(0, 3);
+
 const SocialLink = ({ name, url }) => {
   const backgroundImage = require(`../../../public/images/icons/${name}.webp`);
 
@@ -20,7 +22,7 @@ const SocialLink = ({ name, url }) => {
 
 export const Socials = () => (
   <div className="Socials">
-    {links.map(link => (
+    {selectedLinks.map(link => (
       <SocialLink
         key={link.id}
         name={link.name}

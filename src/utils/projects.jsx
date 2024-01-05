@@ -87,6 +87,7 @@ export const projects = [{
 },{
   id: 20,
   name: "Fatboy the Original",
+  url: "https://www.behance.net/gallery/188116553/Illustrative-World-of-Fatboy",
   imageIds: [ "fatboy1", "fatboy2", "fatboy3" ]
 },  {
   id: 21,
